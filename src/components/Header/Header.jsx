@@ -37,7 +37,7 @@ const Header = () => {
         <ul>
           <li>
             <a href="#parcerias" onClick={() => scrollToSection("parcerias")}>
-              Parcerias
+              Divulgações
             </a>
           </li>
           <li>
@@ -58,14 +58,7 @@ const Header = () => {
               Faq
             </a>
           </li>
-          <li>
-            <a
-              href="#divulgacoes"
-              onClick={() => scrollToSection("divulgacoes")}
-            >
-              Divulgações
-            </a>
-          </li>
+          
           <li>
             <a href="#contato" onClick={() => scrollToSection("contato")}>
               Entre em Contato
