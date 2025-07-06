@@ -1,0 +1,44 @@
+.cardDepoimentos {
+  background-color: #FFFFFF; /* Fundo branco para os cards */
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Adicionei uma sombra sutil para destaque */
+}
+
+.depoimento {
+  font-style: italic;
+  color: #333;
+  margin: 0 0 8px 0;
+  flex-grow: 1;
+}
+
+.autor {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.autorTexto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.avatarAutor {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nomeAutor {
+  font-weight: bold;
+  color: #000;
+  margin-top: 0;
+}

@@ -36,14 +36,6 @@ const Header = () => {
       <nav className={`nav-header ${isMenuOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <a
-              href="#divulgacoes"
-              onClick={() => scrollToSection("divulgacoes")}
-            >
-              Divulgações
-            </a>
-          </li>
-          <li>
             <a href="#parcerias" onClick={() => scrollToSection("parcerias")}>
               Parcerias
             </a>
@@ -64,6 +56,14 @@ const Header = () => {
           <li>
             <a href="#faq" onClick={() => scrollToSection("faq")}>
               Faq
+            </a>
+          </li>
+          <li>
+            <a
+              href="#divulgacoes"
+              onClick={() => scrollToSection("divulgacoes")}
+            >
+              Divulgações
             </a>
           </li>
           <li>

@@ -1,0 +1,15 @@
+.containerUmMetricas {
+    border: 1px solid #7D0000;
+    text-align: center;
+    align-items: left;
+    width: 300px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 12px;
+}
+
+.containerMetricas > div {
+    border: 1px solid pink;
+}
+

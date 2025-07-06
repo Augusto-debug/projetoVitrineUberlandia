@@ -1,0 +1,74 @@
+/* Definição da variável de cor, como visto no Figma */
+:root {
+  --brand-marron: #6B0504; /* Exemplo de cor. Substitua pela cor exata. */
+  --text-primary: #FFFFFF; /* Cor para o título principal */
+}
+
+.secaoDepoimentos {
+  position: relative; /* Permite posicionamento absoluto dos filhos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 128px 24px;
+  background-color: var(--brand-marron);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  overflow: visible; /* Permite que a imagem ultrapasse os limites */
+}
+
+.containerDepoimentos {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  background-color: #F8FAFC;
+  padding: 24px;
+  margin-left: 200px; /* Espaço para a imagem fixa */
+}
+
+.tituloDepoimentos {
+  font-size: 3rem; /* Tamanho de exemplo para o título */
+  color: var(--text-primary);
+  margin: 0;
+  text-align: center;
+}
+
+.gridDepoimentos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Cria duas colunas */
+  gap: 32px; /* Espaço entre os cards */
+  width: 100%;
+}
+
+.wrapperDepoimentos {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 0;
+  position: relative; /* Para referência do posicionamento absoluto da imagem */
+}
+
+.imagemConsultora {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-45%, 0); /* Ajuste para centralizar melhor se necessário */
+  width: 400px;        /* Aumente o valor conforme desejar */
+  max-width: 700px;    /* Ajuste o limite máximo */
+  min-width: 250px;
+  height: auto;
+  border-radius: 24px;
+  z-index: 2;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  pointer-events: none;
+}

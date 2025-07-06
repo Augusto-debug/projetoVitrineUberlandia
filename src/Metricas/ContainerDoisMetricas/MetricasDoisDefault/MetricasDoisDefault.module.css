@@ -1,0 +1,29 @@
+.containerGrafico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  font-weight: bold;
+  color: #7c0000;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.valorCentro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #7c0000;
+  pointer-events: none;
+}
