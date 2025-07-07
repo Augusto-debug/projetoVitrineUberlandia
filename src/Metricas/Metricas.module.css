@@ -7,16 +7,17 @@
 
 /* Definição de Variáveis (coloque no :root ou no seu elemento principal) */
 :root {
-    --Container-Max-laptop: 1140px;
+    /* --Container-Max-laptop: 1140px;
     --Container-Max-desktop: 1440px;
-    --Font-Size-lead: 20px;
+    --Font-Size-lead: 20px; */
 }
 
 .sectionMetricas {
     position: relative;
     overflow: hidden;
-    padding: 60px 0;
+    /* Permite que o conteúdo interno não transborde */
     background: #fff;
+    /* padding: 60px 0; */
     /* branco acima */
 }
 
@@ -40,35 +41,36 @@
 /* Container para o conteúdo textual */
 .containerMetricas {
     width: 100%;
-    max-width: var(--Container-Max-laptop);
-    margin: 0 auto;
-    padding: 0 20px;
-    /* Adiciona espaçamento nas laterais */
     position: relative;
     z-index: 2;
     /* Garante que o conteúdo fique sobre as camadas de fundo */
+
+    /* max-width: var(--Container-Max-laptop); */
+    /* margin: 0 auto; */
+    /* padding: 0 20px; */
+
 }
 
 .containerMetricas>div {
-    margin: 20px 0;
+    /* margin: 20px 0; */
     /* Ajustado para espaçamento vertical */
 }
 
 .containerMetricas p {
-    font-size: var(--Font-Size-lead);
-    font-weight: 400;
+    /* font-size: var(--Font-Size-lead); */
+    /* font-weight: 400; */
     /* 'font-weight' aceita apenas um valor */
 }
 
 .sectionMetricas::before {
-  content: "";
-  position: absolute;
-  top: -10%;           /* Move metade do SVG para cima, mostrando só a parte de baixo */
-  left: 0;
-  width: 247px;
-  height: 247px;
-  background: url('/vetor-metricas.svg') no-repeat left top;
-  background-size: contain;
-  z-index: 2;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 247px;
+    height: 247px;
+    background: url('/vetor-metricas.svg') no-repeat left top;
+    background-size: contain;
+    z-index: 2;
+    pointer-events: none;
 }

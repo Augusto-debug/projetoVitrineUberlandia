@@ -7,7 +7,7 @@ import style from "./Metricas.module.css";
 
 const SectionMetricas = () => {
   return (
-    <section className={style.sectionMetricas}>
+    <section id="metricas" className={style.sectionMetricas}>
 
 
       <Apresentacao

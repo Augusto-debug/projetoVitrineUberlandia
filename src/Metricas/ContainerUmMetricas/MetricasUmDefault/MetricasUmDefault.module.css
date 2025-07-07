@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-weight: bold;
-
 }
 
 .metricaUnica p,
@@ -12,18 +10,13 @@
 }
 
 .metricaUnica p {
-    font-weight: bold;
     color: #7c0000;
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
 }
 
 
 .metricaUnica>span {
-    /* style */
     background-color: #7D0000;
     color: white;
-    /* layout */
     width: 80%;
     padding: 10px;
     border-radius: 8px;

@@ -29,7 +29,7 @@ const MetricasDoisDefault = ({ textoMetrica, numerosMetrica }) => {
 
   return (
     <div className={style.containerGrafico}>
-      <span className={style.titulo}>{textoMetrica}</span>
+      <p className={style.titulo}>{textoMetrica}</p>
       <div className={style.wrapper}>
         <Doughnut data={data} options={options} />
         <div className={style.valorCentro}>

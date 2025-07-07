@@ -1,20 +1,19 @@
 .cardDepoimentos {
   background-color: #FFFFFF; /* Fundo branco para os cards */
   border-radius: 8px;
-  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+    /* padding: 24px; */
+  /* gap: 20px; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  /* Adicionei uma sombra sutil para destaque */
 }
 
 .depoimento {
   font-style: italic;
   color: #333;
-  margin: 0 0 8px 0;
-  flex-grow: 1;
+  /* margin: 0 0 8px 0; */
+  flex-grow: 1; /* Permite que o depoimento ocupe o espaço restante */
 }
 
 .autor {
@@ -31,14 +30,14 @@
 }
 
 .avatarAutor {
-  width: 48px;
-  height: 48px;
+  width: 48px; /* Tamanho do avatar */
+  height: 48px; /* Tamanho do avatar */
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
 }
 
 .nomeAutor {
   font-weight: bold;
   color: #000;
-  margin-top: 0;
+  /* margin-top: 0; */
 }
