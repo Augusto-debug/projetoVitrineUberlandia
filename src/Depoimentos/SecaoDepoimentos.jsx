@@ -1,14 +1,14 @@
-import React from 'react';
-import CardDepoimentos from './CardDepoimentos.jsx';
-import { depoimentos } from './DadosDepoimentos.js';
-import style from './SecaoDepoimentos.module.css';
-import Apresentacao from '../Apresentacao.jsx';
+import React from "react";
+import CardDepoimentos from "./CardDepoimentos.jsx";
+import { depoimentos } from "./DadosDepoimentos.js";
+import style from "./SecaoDepoimentos.module.css";
+import Apresentacao from "../Apresentacao.jsx";
 
 const SecaoDepoimentos = () => {
   return (
-    <section className={style.secaoDepoimentos}>
+    <section id="depoimentos" className={style.secaoDepoimentos}>
       <Apresentacao tituloSecao="Depoimentos" />
-   <div className={style.wrapperDepoimentos}>
+      <div className={style.wrapperDepoimentos}>
         <div className={style.containerImagemDepoimentos}>
           <div className={style.imagemConsultoraWrapper}>
             <img
