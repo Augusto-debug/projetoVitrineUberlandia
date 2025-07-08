@@ -18,8 +18,8 @@ function App() {
       <Parceiros />
       <SectionMetricas />
       <SecaoDepoimentos />
-      <SecaoFaq />
       <SecaoParceiros />
+      <SecaoFaq />
       <FaleConosco />
       <Footer />
       <Whatsapp />
