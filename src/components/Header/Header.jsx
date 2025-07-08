@@ -35,9 +35,9 @@ const Header = () => {
 
       <nav className={`nav-header ${isMenuOpen ? "active" : ""}`}>
         <ul>
-          <li>
+        <li>
             <a href="#parcerias" onClick={() => scrollToSection("parcerias")}>
-              Parcerias
+              Divulgações
             </a>
           </li>
           <li>
@@ -54,21 +54,22 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#parceiros"
-              onClick={() => scrollToSection("parceiros")}
-            >
-              Divulgações
+            <a href="#parceiros" onClick={() => scrollToSection("parceiros")}>
+              Parcerias
             </a>
           </li>
           <li>
             <a href="#faq" onClick={() => scrollToSection("faq")}>
-              Faq
+              FAQ
             </a>
           </li>
           <li>
-            <a href="#faleConosco" onClick={() => scrollToSection("faleConosco")}>
-              Entre em Contato
+            <a 
+              href="#faleConosco" 
+              onClick={() => scrollToSection("faleConosco")}
+              className="contact-button"
+            >
+              Entre em contato
             </a>
           </li>
         </ul>
