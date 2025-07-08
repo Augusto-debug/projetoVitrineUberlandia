@@ -1,0 +1,84 @@
+.secaoFaq {
+    display: flex;
+    flex-direction: column;
+    background-color: #7D0000; 
+    padding: 20px;
+    gap: 20px;
+    align-items: center; 
+    text-align: center; 
+}
+
+.secaoFaq h3 {
+    font-size: 1.5em; 
+    margin-bottom: 5px; 
+    color: white; 
+}
+
+.secaoFaq h2 {
+    font-size: 2.5em; 
+    margin-bottom: 20px;
+    color: white; 
+}
+
+.secaoFaq p {
+    padding: 10px 20px;
+    color: white; 
+    max-width: 800px; 
+}
+
+.secaoFaq details {
+    background-color: transparent; 
+    border-radius: 0; 
+    margin-bottom: 0; 
+    width: 100%; 
+    max-width: 800px; 
+    overflow: hidden; 
+    border: none; 
+    padding-top: 10px;
+}
+
+.secaoFaq summary {
+    padding: 0 10px 15px 0; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: space-between;
+    color: white; 
+    background-color: transparent; 
+    border-bottom: none;
+    border-top: none; 
+
+    list-style: none;
+}
+
+.secaoFaq summary::-webkit-details-marker {
+    display: none;
+}
+
+.secaoFaq summary::after {
+    content: '\25BC';
+    font-size: 1.2em;
+    color: white;
+    margin-left: 10px; 
+    flex-shrink: 0; 
+    transition: transform 0.3s ease; 
+}
+
+.secaoFaq details[open] summary::after {
+    transform: rotate(180deg); 
+}
+
+.secaoFaq details p {
+    font-size: 18px;
+    padding: 15px 20px 10px 0; 
+    background-color: transparent; 
+    border-top: none;
+    text-align: left; 
+    margin-top: 0; 
+    margin-bottom: 0; 
+}
+
+.secaoFaq details + details {
+    border-top: 1px solid rgba(255, 255, 255, 0.5); 
+}

@@ -1,0 +1,162 @@
+.secaoParceiros {
+    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 100vh;
+    padding: 40px 20px;
+    overflow: hidden; 
+    
+    background-image: url('uberlandiaNoite.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white; 
+}
+
+.secaoParceiros::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 240, 240, 0.4); 
+    z-index: 0; 
+}
+
+.secaoParceiros::after {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F8FAFC;
+    clip-path: polygon(0 0, 100% 0, 100% 55%); 
+    z-index: 1; 
+}
+
+.conteudoTexto {
+    z-index: 2; 
+    text-align: center; 
+    padding: 0 20px;
+    max-width: 600px; 
+    margin-bottom: 40px; 
+    color: #000; 
+}
+
+.secaoParceiros h2 { 
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    color: #000; 
+}
+
+.secaoParceiros p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #000;
+    white-space: nowrap; 
+    padding-bottom: 20px;
+}
+
+.containerParceiros {
+    z-index: 2; 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    background-color: #F8FAFC; 
+    padding: 20px; 
+    border-radius: 10px; 
+    border: 2px solid #7D0000; 
+    
+    width: 600px; 
+    margin-right: 40px; 
+    margin-left: auto; 
+}
+
+.partnerItem {
+    text-align: center;
+    background-color: #fff; 
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.partnerItem img {
+    max-width: 160px; 
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 1 / 1; 
+    object-fit: contain; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+}
+
+.partnerItem p {
+    font-weight: bold;
+    color: #000; 
+    margin: 0; 
+}
+
+
+@media (max-width: 1200px) {
+    .secaoParceiros {
+        padding: 30px 15px;
+    }
+    .secaoParceiros::before {
+        background-color: rgba(240, 240, 240, 0.7); 
+    }
+    .conteudoTexto {
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+    .containerParceiros {
+        grid-template-columns: repeat(2, 1fr); 
+        width: calc(100% - (15px * 2)); 
+        max-width: 400px; 
+        margin-right: auto; 
+        margin-left: auto; 
+        gap: 15px; 
+        padding: 15px; 
+    }
+    .partnerItem img {
+        max-width: 150px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .secaoParceiros {
+        padding: 20px 10px;
+    }
+    .secaoParceiros::before {
+        background-color: rgba(240, 240, 240, 0.9); 
+    }
+    .conteudoTexto {
+        max-width: 95%;
+        padding: 0 5px;
+    }
+    .secaoParceiros h2 {
+        font-size: 1.8em;
+    }
+    .secaoParceiros p {
+        white-space: nowrap; 
+        overflow: hidden;    
+        text-overflow: ellipsis; 
+    }
+    .containerParceiros {
+        grid-template-columns: repeat(1, 1fr); 
+        width: calc(100% - (10px * 2)); 
+        max-width: 250px; 
+        margin-right: auto; 
+        margin-left: auto; 
+        gap: 10px; 
+        padding: 10px; 
+    }
+    .partnerItem img {
+        max-width: 180px;
+    }
+}
