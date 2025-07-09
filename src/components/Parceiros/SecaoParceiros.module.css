@@ -1,17 +1,255 @@
-.secaoParceiros {
-    position: relative;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    min-height: 100vh;
-    padding: 40px 20px;
-    overflow: hidden; 
-    
-    background-image: url('/uberlandiaNoite.jpg');
-    background-size: cover; 
+.faleConoscoSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.topSection {
+    background-image: url('uberlandiaDia.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: white; 
+
+    filter: none;
+    -webkit-filter: none;
+
+    padding: 60px 20px 0;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    min-height: 550px;
+    position: relative;
+    z-index: 20;
+}
+
+.topSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 0;
+}
+
+.contactForm {
+    width: 100%;
+    max-width: 510px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 25;
+    margin-bottom: 0;
+    /* Removido o margin-bottom negativo */
+    margin-right: 5%;
+    align-self: flex-end;
+    text-align: left;
+    align-items: center;
+}
+
+.contactForm h2 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: left;
+    width: 100%;
+}
+
+.contactForm p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #334155;
+    text-align: left;
+    width: 100%;
+}
+
+.contactForm div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+.contactForm label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #94A3B8;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm input[type="tel"],
+.contactForm textarea {
+    padding: 12px;
+    border: 1px solid #C9C9C9;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F8FAFC;
+    color: #0F172A;
+}
+
+.contactForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    outline: none;
+    border-color: #7D0000;
+    box-shadow: 0 0 0 3px rgba(125, 0, 0, 0.2);
+}
+
+.contactForm button {
+    background-color: #7D0000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactForm button:hover {
+    background-color: #A00000;
+}
+
+.statusMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0F172A;
+}
+
+.statusMessage.success {
+    color: green;
+}
+
+.statusMessage.error {
+    color: red;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.bottomSection {
+    background-color: #7D0000;
+    padding: 120px 20px 60px 20px;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.contactInfoWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    justify-items: start;
+    align-items: start;
+}
+
+.contactInfoWrapper>div {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.contactInfoWrapper h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.contactInfoWrapper h4 svg {
+    font-size: 1.7em;
+    color: white;
+}
+
+.contactInfoWrapper p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: white;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.bottomSection a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.bottomSection a:hover {
+    color: #DDDDDD;
+    text-decoration: underline;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.secaoParceiros {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    overflow: hidden;
+
+    background-image: url('uberlandiaNoite.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
 }
 
 .secaoParceiros::before {
@@ -21,85 +259,85 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(240, 240, 240, 0.4); 
-    z-index: 0; 
+    background-color: rgba(240, 240, 240, 0.4);
+    z-index: 0;
 }
 
 .secaoParceiros::after {
-    content: ''; 
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #F8FAFC;
-    clip-path: polygon(0 0, 100% 0, 100% 55%); 
-    z-index: 1; 
+    clip-path: polygon(0 0, 100% 0, 100% 55%);
+    z-index: 1;
 }
 
 .conteudoTexto {
-    z-index: 2; 
-    text-align: center; 
+    z-index: 2;
+    text-align: center;
     padding: 0 20px;
-    max-width: 600px; 
-    margin-bottom: 40px; 
-    color: #000; 
+    max-width: 600px;
+    margin-bottom: 40px;
+    color: #000;
 }
 
-.secaoParceiros h2 { 
+.secaoParceiros h2 {
     margin-bottom: 10px;
     font-size: 2.5em;
-    color: #000; 
+    color: #000;
 }
 
 .secaoParceiros p {
     line-height: 1.6;
     font-size: 1.1em;
     color: #000;
-    white-space: nowrap; 
+    white-space: nowrap;
     padding-bottom: 20px;
 }
 
 .containerParceiros {
-    z-index: 2; 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
-    background-color: #F8FAFC; 
-    padding: 20px; 
-    border-radius: 10px; 
-    border: 2px solid #7D0000; 
-    
-    width: 600px; 
-    margin-right: 40px; 
-    margin-left: auto; 
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: #F8FAFC;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #7D0000;
+
+    width: 600px;
+    margin-right: 40px;
+    margin-left: auto;
 }
 
 .partnerItem {
     text-align: center;
-    background-color: #fff; 
+    background-color: #fff;
     padding: 10px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
 .partnerItem img {
-    max-width: 160px; 
-    width: 100%; 
-    height: auto; 
-    aspect-ratio: 1 / 1; 
-    object-fit: contain; 
-    border-radius: 5px; 
-    margin-bottom: 10px; 
+    max-width: 160px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .partnerItem p {
     font-weight: bold;
-    color: #000; 
-    margin: 0; 
+    color: #000;
+    margin: 0;
 }
 
 
@@ -107,55 +345,75 @@
     .secaoParceiros {
         padding: 30px 15px;
     }
+
     .secaoParceiros::before {
-        background-color: rgba(240, 240, 240, 0.7); 
+        background-color: rgba(240, 240, 240, 0.7);
     }
+
     .conteudoTexto {
         max-width: 80%;
         margin-bottom: 30px;
     }
+
     .containerParceiros {
-        grid-template-columns: repeat(2, 1fr); 
-        width: calc(100% - (15px * 2)); 
-        max-width: 400px; 
-        margin-right: auto; 
-        margin-left: auto; 
-        gap: 15px; 
-        padding: 15px; 
+        grid-template-columns: repeat(2, 1fr);
+        width: calc(100% - (15px * 2));
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        gap: 15px;
+        padding: 15px;
     }
+
     .partnerItem img {
-        max-width: 150px; 
+        max-width: 150px;
     }
 }
 
 @media (max-width: 768px) {
+
+    .secaoParceiros {
+        background-image: none;
+        background-color: white;
+        min-height: auto;
+        padding: 40px 10px;
+    }
+
+    .secaoParceiros::before,
+    .secaoParceiros::after {
+        display: none;
+    }
+
     .secaoParceiros {
         padding: 20px 10px;
     }
-    .secaoParceiros::before {
-        background-color: rgba(240, 240, 240, 0.9); 
-    }
+
     .conteudoTexto {
         max-width: 95%;
         padding: 0 5px;
     }
+
     .secaoParceiros h2 {
         font-size: 1.8em;
     }
+
     .secaoParceiros p {
-        white-space: nowrap; 
-        overflow: hidden;    
-        text-overflow: ellipsis; 
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        padding-bottom: 10px;
     }
+
     .containerParceiros {
-        grid-template-columns: repeat(1, 1fr); 
-        width: calc(100% - (10px * 2)); 
-        max-width: 250px; 
-        margin-right: auto; 
-        margin-left: auto; 
-        gap: 10px; 
-        padding: 10px; 
+        grid-template-columns: repeat(1, 1fr);
+        width: calc(100% - (10px * 2));
+        max-width: 250px;
+        margin-right: auto;
+        margin-left: auto;
+        gap: 10px;
+        padding: 10px;
     }
+
     .partnerItem img {
         max-width: 180px;
     }
