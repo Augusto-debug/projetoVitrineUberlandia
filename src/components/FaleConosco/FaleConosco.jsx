@@ -79,7 +79,7 @@ function FaleConosco() {
   };
 
   return (
-    <section className={styles.faleConoscoSection}>
+    <section id='faleConosco' className={styles.faleConoscoSection}>
       <div 
         className={styles.topSection}
       >
