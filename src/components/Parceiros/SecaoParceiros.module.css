@@ -245,7 +245,7 @@
     padding: 40px 20px;
     overflow: hidden;
 
-    background-image: url('uberlandiaNoite.jpg');
+    background-image: url('/uberlandiaNoite.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
