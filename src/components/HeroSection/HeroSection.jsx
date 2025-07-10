@@ -2,6 +2,17 @@ import React from 'react'
 import './HeroSection.css'
 
 const HeroSection = () => {
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <section id='hero' className='hero-container'>
       <div className='hero-content'>
@@ -22,10 +33,10 @@ const HeroSection = () => {
             trabalhar com propósito, ao lado de pessoas honestas e dedicadas, 
             que buscam conquistar seu espaço com amor pelo que fazem.
           </p>
-          <div className='hero-actions'>
-            <button className='partner-btn'>Seja um parceiro!</button>
+            <div className='hero-actions'>
+              <button className='partner-btn' onClick={() => scrollToSection("faleConosco")}>Seja um parceiro!</button>
             <div className='social-icons'>
-              <a href="#" className='whatsapp-icon'>
+              <a href="#" className='whatsapp-icon'>  
                 <img src="/whatsapp.png" alt="WhatsApp" onClick={() => window.open('https://wa.me/5534991954278', '_blank')} />
               </a>
               <a href="#" className='instagram-icon'>

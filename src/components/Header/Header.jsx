@@ -69,7 +69,7 @@ const Header = () => {
               onClick={() => scrollToSection("faleConosco")}
               className="contact-button"
             >
-              Entre em contato
+              Seja um parceiro!
             </a>
           </li>
         </ul>

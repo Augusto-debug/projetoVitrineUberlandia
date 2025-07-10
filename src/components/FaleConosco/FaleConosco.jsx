@@ -84,7 +84,7 @@ function FaleConosco() {
         className={styles.topSection}
       >
         <form onSubmit={handleSubmit} className={styles.contactForm}>
-          <h2>Entre em Contato</h2>
+          <h2>Seja um parceiro</h2>
           <p>Eu quero ouvir você</p>
 
           <div>
