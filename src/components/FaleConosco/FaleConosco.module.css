@@ -5,7 +5,7 @@
 }
 
 .topSection {
-    background-image: url('uberlandiaDia.jpg');
+    background-image: url('/uberlandiaDia.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
