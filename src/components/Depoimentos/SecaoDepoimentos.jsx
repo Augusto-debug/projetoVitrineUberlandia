@@ -12,7 +12,7 @@ const SecaoDepoimentos = () => {
         <div className={style.containerImagemDepoimentos}>
           <div>
             <img
-              src="/foto1-Editada.jpg"
+              src="/foto2Editada.jpg"
               alt="Consultora"
               className={style.imagemConsultora}
             />
