@@ -306,8 +306,6 @@
     background-color: #F8FAFC;
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid #7D0000;
-
     width: 600px;
     margin-right: 40px;
     margin-left: auto;
@@ -371,12 +369,11 @@
 }
 
 @media (max-width: 768px) {
-
     .secaoParceiros {
         background-image: none;
         background-color: white;
         min-height: auto;
-        padding: 40px 10px;
+        padding: 40px 15px;
     }
 
     .secaoParceiros::before,
@@ -384,37 +381,90 @@
         display: none;
     }
 
-    .secaoParceiros {
-        padding: 20px 10px;
-    }
-
     .conteudoTexto {
         max-width: 95%;
-        padding: 0 5px;
+        padding: 0 15px;
     }
 
     .secaoParceiros h2 {
-        font-size: 1.8em;
+        font-size: 2rem;
     }
 
     .secaoParceiros p {
         white-space: normal;
         overflow: visible;
         text-overflow: clip;
+        padding-bottom: 15px;
+        font-size: 1rem;
+    }
+
+    .containerParceiros {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        background-color: #F8FAFC;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .partnerItem {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .partnerItem img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsividade para mobile */
+@media (max-width: 480px) {
+    .secaoParceiros {
+        padding: 30px 10px;
+    }
+
+    .conteudoTexto {
+        padding: 0 10px;
+    }
+
+    .secaoParceiros h2 {
+        font-size: 1.8rem;
+    }
+
+    .secaoParceiros p {
+        font-size: 0.95rem;
         padding-bottom: 10px;
     }
 
     .containerParceiros {
-        grid-template-columns: repeat(1, 1fr);
-        width: calc(100% - (10px * 2));
-        max-width: 250px;
-        margin-right: auto;
-        margin-left: auto;
-        gap: 10px;
-        padding: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+        padding: 15px;
+        width: 100%;
+        margin: 0 auto;
     }
 
-    .partnerItem img {
-        max-width: 180px;
+    .partnerItem {
+        min-height: 180px;
+        padding: 15px;
+    }
+}
+
+/* Grid dinâmico para telas pequenas */
+@media (max-width: 360px) {
+    .containerParceiros {
+        grid-template-columns: 1fr !important;
+        padding: 12px;
+    }
+    
+    .partnerItem {
+        min-height: 160px;
+        padding: 12px;
     }
 }
