@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: bold;
 }
 
-.metricaUnica p,
-.metricaUnica span {
-    margin: 5px;
+.metricaUnica p {
+    margin-bottom: 10px;
 }
 
 .metricaUnica p {
@@ -17,7 +17,7 @@
 .metricaUnica>span {
     background-color: #7D0000;
     color: white;
-    width: 80%;
+    width: 60%;
     padding: 10px;
     border-radius: 8px;
 

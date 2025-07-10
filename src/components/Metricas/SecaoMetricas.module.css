@@ -1,0 +1,78 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteudoMetricas {
+    width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.secaoMetricas {
+    position: relative;
+    overflow: hidden;
+    /* Garante que o conteúdo não transborde */
+    background: #fff;
+    padding: 64px 0;
+}
+
+.metricasTipoUm,
+.metricasTipoDois {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    border: 1px solid #7D0000;
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 12px;
+    background-color: white;
+    font-size: 1.4rem;
+}
+
+
+.secaoMetricas::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/uberlandia.jpg') center center/cover no-repeat;
+    opacity: 0.35;
+    z-index: 0;
+    clip-path: polygon(0 45%, 100% 30%, 100% 100%, 0 100%);
+    pointer-events: none;
+}
+
+.containerMetricas {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.containerMetricas>div {
+    margin: 20px;
+
+}
+
+
+.secaoMetricas::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 247px;
+    height: 247px;
+    background: url('/vetor-metricas.svg') no-repeat left top;
+    background-size: contain; /* Ajusta o tamanho do vetor para caber no espaço disponível */
+    z-index: 2; /* Garante que o vetor fique acima do fundo */
+    pointer-events: none;
+}

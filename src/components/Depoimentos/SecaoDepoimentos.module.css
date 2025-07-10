@@ -1,0 +1,75 @@
+:root {
+  --brand-marron: #6B0504;
+  --text-primary: #FFFFFF;
+}
+
+.secaoDepoimentos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--brand-marron);
+  padding: 64px 0;
+
+}
+
+.conteudoDepoimentos {
+  width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.secaoDepoimentos h3 {
+  color: white;
+  font-weight: bold;
+}
+
+
+
+.containerImagemDepoimentos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0;
+}
+
+.containerImagemDepoimentos > div:nth-child(1) {
+  position: relative;
+  z-index: 2;
+  width: 340px;
+  min-width: 340px;
+  max-width: 340px;
+  margin-right: 0;
+  overflow: visible;
+  display: flex;
+  align-items: flex-start; 
+}
+
+.imagemConsultora {
+  position: absolute;
+  top: -10px;
+  bottom: -40px; 
+  right: -2px;
+  height: 500px;
+  width: auto;
+  border-radius: 16px;
+  background: #fff;
+  z-index: 2;
+}
+
+.containerImagemDepoimentos > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 16px;
+  background-color: #fff;
+  border-radius: 0 16px 16px 0;
+  padding: 32px 32px 32px 32px;
+  background-image: url('/vetor-depoimentos.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 180px auto;
+  z-index: 1;
+}
+
