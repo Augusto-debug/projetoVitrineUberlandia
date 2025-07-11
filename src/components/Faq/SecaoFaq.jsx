@@ -30,8 +30,7 @@ export default function SecaoFaq() {
 
   return (
     <section id="faq" className={style.secaoFaq}>
-      <h3>FAQ</h3>
-      <h2>Perguntas frequentes</h2>
+      <h3>Perguntas frequentes</h3>
       {perguntas.map((item, index) => (
         <details key={index}>
           <summary>

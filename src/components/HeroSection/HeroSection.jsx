@@ -35,15 +35,7 @@ const HeroSection = () => {
           </p>
             <div className='hero-actions'>
               <button className='partner-btn' onClick={() => scrollToSection("faleConosco")}>Seja um parceiro!</button>
-            <div className='social-icons'>
-              <a href="#" className='whatsapp-icon'>  
-                <img src="/whatsapp.png" alt="WhatsApp" onClick={() => window.open('https://wa.me/5534991954278', '_blank')} />
-              </a>
-              <a href="#" className='instagram-icon'>
-                <img src="/Instagram.png" alt="Instagram" onClick={() => window.open('https://www.instagram.com/vitrine_uberlandia/', '_blank')} />
-              </a>
             </div>
-          </div>
         </div>
         <div className='hero-image'>
           <img src="/imgHeroSection.jpg" alt="Érica - Vitrine Uberlândia" />
