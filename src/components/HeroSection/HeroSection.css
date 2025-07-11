@@ -1,5 +1,5 @@
 .hero-container {
-  background-color: white;
+  background-color: #FAFAFA;
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -15,7 +15,6 @@
   left: 0;
   right: 0;
   height: 150px;
-  background: linear-gradient(to right, transparent 0%, rgba(110,17,17,0.05) 50%, transparent 100%);
   transform: skewY(-2deg);
 }
 
@@ -26,6 +25,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+  background-color: #FAFAFA;
 }
 
 .hero-text {
@@ -72,7 +72,7 @@
 
 .partner-btn {
   background-color: #6e1111;
-  color: white;
+  color: #FAFAFA;
   padding: 15px 30px;
   border: none;
   border-radius: 25px;

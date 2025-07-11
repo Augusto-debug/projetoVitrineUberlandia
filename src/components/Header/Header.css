@@ -10,13 +10,13 @@
     align-items: center;
     padding: 15px 40px;
     position: relative;
-    background-color: white;
+    background-color: #FAFAFA;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container img {
-    height: 80px;
-    width: auto;
+        height: 100px;
+        width: auto;
 }
 
 .nav-header {

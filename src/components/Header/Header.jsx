@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <section className="header-container">
-      <img src="/logoVitrineUberlandia.png" alt="logo" />
+      <img src="/ericaLogo.svg" alt="logo" />
 
       <button
         className={`menu-toggle ${isMenuOpen ? "active" : ""}`}

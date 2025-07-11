@@ -1,6 +1,6 @@
 :root {
   --brand-marron: #6B0504;
-  --text-primary: #FFFFFF;
+  --text-primary: background-color: #FAFAFA;
 }
 
 .secaoDepoimentos {
@@ -33,7 +33,7 @@
   align-items: stretch;
   width: 100%;
   gap: 0;
-  background-color: #fff;
+  background-color: #FAFAFA;
   border-radius: 16px;
   overflow: hidden;
   height: 500px;
@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
+  background-color: #FAFAFA;
 }
 
 .imagemConsultora {
@@ -64,7 +64,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px 16px;
-  background-color: #fff;
+  background-color: #FAFAFA;
   padding: 32px 32px 32px 32px;
   background-image: url('/vetor-depoimentos.svg');
   background-repeat: no-repeat;
@@ -126,7 +126,7 @@
   .containerImagemDepoimentos {
     flex-direction: column;
     height: auto;
-    background-color: #fff;
+    background-color: #FAFAFA;  
     border-radius: 16px;
     gap: 20px;
   }
