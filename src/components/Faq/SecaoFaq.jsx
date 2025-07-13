@@ -11,9 +11,6 @@ export default function SecaoFaq() {
       try {
         const response = await fetch(url);
         const data = await response.json();
-
-        console.log(data);
-
         if (data && Array.isArray(data.faq)) {
           setPerguntas(data.faq);
         } else {
