@@ -78,6 +78,7 @@
   border-radius: 25px;
   font-size: 1.1rem;
   font-weight: 600;
+  margin: 0 auto;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(110,17,17,0.3);
