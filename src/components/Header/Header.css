@@ -262,6 +262,13 @@
     font-size: 13px;
   }
 
+  .nav-header.active {
+    display: block;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
   .header-container img {
     height: 70px;
   }
