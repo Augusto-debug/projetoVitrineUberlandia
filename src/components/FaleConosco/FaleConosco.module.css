@@ -4,7 +4,10 @@
     width: 100%;
 }
 
+
+
 .topSection {
+    width: 100%;
     background-image: url('/uberlandiaDia.jpg');
     background-size: cover;
     background-position: center;
@@ -34,6 +37,13 @@
     height: 100%;
     background-color: rgba(255, 255, 255, 0.3);
     z-index: 0;
+}
+
+.topSection > div, .bottomSection > div{
+    width: 1200px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid green;
 }
 
 .contactForm {
@@ -155,6 +165,7 @@
 }
 
 .bottomSection {
+    width: 100%;
     background-color: #7D0000;
     padding: 120px 20px 60px 20px;
     color: white;
@@ -165,6 +176,8 @@
     position: relative;
     z-index: 10;
 }
+
+
 
 .contactInfoWrapper {
     display: grid;

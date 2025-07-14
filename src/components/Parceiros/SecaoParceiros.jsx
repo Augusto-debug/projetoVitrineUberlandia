@@ -13,25 +13,27 @@ function SecaoParceiros() {
 
   return (
     <section id='parceiros' className={styles.secaoParceiros}>
-      <div className={styles.conteudoTexto}> 
-        <h2>Conheça nossos parceiros</h2>
-        <p>
-          Conheça as marcas que acreditaram no meu trabalho para construir uma presença forte no Instagram.
-        </p>
-      </div>
+      <div>
+        <div className={styles.conteudoTexto}> 
+          <h2>Conheça nossos parceiros</h2>
+          <p>
+            Conheça as marcas que acreditaram no meu trabalho para construir uma presença forte no Instagram.
+          </p>
+        </div>
 
-      <div className={styles.containerParceiros}> 
-        {partners.map((partner, index) => (
-          <div key={index} className={styles.partnerItem}>
-            <a href={partner.link} target="_blank" rel="noopener noreferrer">
-              <img
-                src={partner.image}
-                alt={partner.name}
-              />
-            </a>
-            <p>{partner.name}</p>
-          </div>
-        ))}
+        <div className={styles.containerParceiros}> 
+          {partners.map((partner, index) => (
+            <div key={index} className={styles.partnerItem}>
+              <a href={partner.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={partner.image}
+                  alt={partner.name}
+                />
+              </a>
+              <p>{partner.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaInstagram, FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
-import emailjs from '@emailjs/browser'; 
+import emailjs from '@emailjs/browser';
 import styles from './FaleConosco.module.css';
 
 function FaleConosco() {
@@ -18,13 +18,13 @@ function FaleConosco() {
   };
 
   const validateTelefone = (telefone) => {
-    const cleanedTelefone = telefone.replace(/\D/g, ''); 
-    const re = /^\d{10,11}$/; 
+    const cleanedTelefone = telefone.replace(/\D/g, '');
+    const re = /^\d{10,11}$/;
     return re.test(cleanedTelefone);
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
     setEmailError('');
     setTelefoneError('');
@@ -47,19 +47,19 @@ function FaleConosco() {
 
     if (!isValid) {
       setStatusEnvio('Por favor, corrija os erros no formulário.');
-      return; 
+      return;
     }
 
-    setStatusEnvio('Enviando...'); 
+    setStatusEnvio('Enviando...');
 
-    const serviceID = 'service_9e2o0ws'; 
-    const templateID = 'template_p3x3e4m'; 
-    const publicKey = 'XzrrK9DHOJrdLn4wd'; 
+    const serviceID = 'service_9e2o0ws';
+    const templateID = 'template_p3x3e4m';
+    const publicKey = 'XzrrK9DHOJrdLn4wd';
 
     const templateParams = {
       user_name: nome,
       user_email: email,
-      user_phone: telefone, 
+      user_phone: telefone,
       message: mensagem,
     };
 
@@ -80,10 +80,11 @@ function FaleConosco() {
 
   return (
     <section id='faleConosco' className={styles.faleConoscoSection}>
-      <div 
+      <div
         className={styles.topSection}
       >
-        <form onSubmit={handleSubmit} className={styles.contactForm}>
+        <div>
+          <form onSubmit={handleSubmit} className={styles.contactForm}>
           <h2>Seja um parceiro!</h2>
           <p>Eu quero ouvir você</p>
 
@@ -147,18 +148,19 @@ function FaleConosco() {
             Enviar Mensagem
           </button>
           {statusEnvio && (
-            <p className={`${styles.statusMessage} ${
-              statusEnvio.includes('sucesso') ? styles.success : 
-              statusEnvio.includes('Erro') ? styles.error : ''
-            }`}>
+            <p className={`${styles.statusMessage} ${statusEnvio.includes('sucesso') ? styles.success :
+                statusEnvio.includes('Erro') ? styles.error : ''
+              }`}>
               {statusEnvio}
             </p>
           )}
         </form>
+        </div>
       </div>
 
       <div className={styles.bottomSection}>
-        <div className={styles.contactInfoWrapper}> 
+          <div>
+                    <div className={styles.contactInfoWrapper}>
           <div>
             <h4>Visite o Instagram</h4>
             <p className={styles.contactItem}><FaInstagram /><a href="https://www.instagram.com/vitrine_uberlandia/" target="_blank" rel="noopener noreferrer">@vitrine_uberlandia</a></p>
@@ -170,6 +172,7 @@ function FaleConosco() {
             <p className={styles.contactItem}><FaEnvelope /> <a href="mailto:vitrine.uberlandia@hotmail.com">vitrine.uberlandia@hotmail.com</a></p>
           </div>
         </div>
+          </div>
       </div>
     </section>
   );

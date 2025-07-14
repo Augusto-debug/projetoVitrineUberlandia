@@ -21,7 +21,8 @@ const Header = () => {
 
   return (
     <header className="header-container">
-      <img src="/ericaLogo.svg" alt="logo" />
+      <div>
+              <img src="/ericaLogo.svg" alt="logo" />
 
       <button
         className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
@@ -74,6 +75,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      </div>
     </header>
   );
 };

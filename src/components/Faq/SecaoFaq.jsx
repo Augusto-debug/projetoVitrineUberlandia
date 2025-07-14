@@ -16,7 +16,7 @@ export default function SecaoFaq() {
         } else {
           console.error("O formato dos dados não é esperado.");
         }
-        
+
       } catch (error) {
         console.error("Erro ao carregar os dados", error);
       }
@@ -27,15 +27,17 @@ export default function SecaoFaq() {
 
   return (
     <section id="faq" className={style.secaoFaq}>
-      <h3>Perguntas frequentes</h3>
-      {perguntas.map((item, index) => (
-        <details key={index}>
-          <summary>
-          <p>{item.pergunta}</p>
-          </summary>
-          <p>{item.resposta}</p>
-        </details>
-      ))}
+      <div>
+        <h3>Perguntas frequentes</h3>
+        {perguntas.map((item, index) => (
+          <details key={index}>
+            <summary>
+              <p>{item.pergunta}</p>
+            </summary>
+            <p>{item.resposta}</p>
+          </details>
+        ))}
+      </div>
     </section>
   );
 }

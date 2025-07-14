@@ -26,3 +26,11 @@ footer {
 section:nth-child(odd) {
     background-color: #7D0000;
 }
+
+
+section > div, header div, footer div {
+    width: 1200px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+}

@@ -207,7 +207,7 @@
     margin: 5px 0;
     color: white;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.5;       
 }
 
 .bottomSection a {
@@ -265,12 +265,22 @@
     width: 100%;
     height: 100%;
     background-color: #F8FAFC;
-    clip-path: polygon(0 0, 100% 0, 100% 55%);
+    clip-path: polygon(0 0, 100% 0, 100% 45%);
     z-index: 1;
 }
 
+.secaoParceiros > div {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 .conteudoTexto {
-    z-index: 2;
+    position: relative;
+    z-index: 10;
     text-align: center;
     padding: 0 20px;
     max-width: 600px;
@@ -282,6 +292,8 @@
     margin-bottom: 10px;
     font-size: 2.5em;
     color: #000;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .secaoParceiros p {
@@ -290,19 +302,21 @@
     color: #000;
     white-space: nowrap;
     padding-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .containerParceiros {
-    z-index: 2;
+    position: relative;
+    z-index: 10;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     background-color: #F8FAFC;
     padding: 10px;
     border-radius: 10px;
-    width: 600px;
-    margin-right: 40px;
-    margin-left: auto;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .partnerItem {
@@ -339,6 +353,11 @@
 
 
 @media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+        padding: 0 15px;
+    }
+
     .secaoParceiros {
         padding: 30px 15px;
     }
@@ -356,14 +375,18 @@
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
         max-width: 400px;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto;
         gap: 15px;
         padding: 15px;
     }
 }
 
 @media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
     .secaoParceiros {
         background-image: none;
         background-color: #fafafa;
@@ -432,6 +455,10 @@
 
 /* Responsividade para mobile */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
     .secaoParceiros {
         padding: 30px 10px;
     }
@@ -465,6 +492,10 @@
 
 /* Grid dinâmico para telas pequenas */
 @media (max-width: 360px) {
+    .container {
+        padding: 0 8px;
+    }
+
     .containerParceiros {
         grid-template-columns: 1fr !important;
         padding: 12px;
