@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <section className="header-container">
+    <header className="header-container">
       <img src="/ericaLogo.svg" alt="logo" />
 
       <button
@@ -74,7 +74,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </section>
+    </header>
   );
 };
 

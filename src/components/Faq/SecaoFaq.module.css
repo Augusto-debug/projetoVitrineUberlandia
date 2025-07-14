@@ -1,7 +1,6 @@
 .secaoFaq {
     display: flex;
     flex-direction: column;
-    background-color: #7D0000; 
     padding: 20px;
     gap: 20px;
     align-items: center; 

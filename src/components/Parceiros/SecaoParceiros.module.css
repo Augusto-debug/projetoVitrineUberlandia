@@ -5,11 +5,6 @@
 }
 
 .topSection {
-    background-image: url('/uberlandiaDia.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
     filter: none;
     -webkit-filter: none;
 
@@ -49,7 +44,6 @@
     position: relative;
     z-index: 25;
     margin-bottom: 0;
-    /* Removido o margin-bottom negativo */
     margin-right: 5%;
     align-self: flex-end;
     text-align: left;
@@ -245,7 +239,7 @@
     padding: 40px 20px;
     overflow: hidden;
 
-    background-image: url('/uberlandiaNoite.jpg');
+    background-image: url('/udi-teatro.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
