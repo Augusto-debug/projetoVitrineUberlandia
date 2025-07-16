@@ -8,7 +8,8 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault();
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({
@@ -33,41 +34,37 @@ const Header = () => {
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
         </button>
-
-        <nav className={`nav-header ${isMenuOpen ? "active" : ""}`}>
+        <nav className="nav-header desktop-nav">
           <ul>
             <li>
-              <a href="#parcerias" onClick={() => scrollToSection("parcerias")}>
+              <a href="#" onClick={(e) => scrollToSection(e, "parcerias")}>
                 Divulgações
               </a>
             </li>
             <li>
-              <a href="#metricas" onClick={() => scrollToSection("metricas")}>
+              <a href="#" onClick={(e) => scrollToSection(e, "metricas")}>
                 Métricas
               </a>
             </li>
             <li>
-              <a
-                href="#depoimentos"
-                onClick={() => scrollToSection("depoimentos")}
-              >
+              <a href="#" onClick={(e) => scrollToSection(e, "depoimentos")}>
                 Depoimentos
               </a>
             </li>
             <li>
-              <a href="#parceiros" onClick={() => scrollToSection("parceiros")}>
+              <a href="#" onClick={(e) => scrollToSection(e, "parceiros")}>
                 Parcerias
               </a>
             </li>
             <li>
-              <a href="#faq" onClick={() => scrollToSection("faq")}>
+              <a href="#" onClick={(e) => scrollToSection(e, "faq")}>
                 FAQ
               </a>
             </li>
             <li>
               <a
-                href="#faleConosco"
-                onClick={() => scrollToSection("faleConosco")}
+                href="#"
+                onClick={(e) => scrollToSection(e, "faleConosco")}
                 className="contact-button"
               >
                 Seja um parceiro!
@@ -76,6 +73,46 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+
+      {/* Nav para mobile - aparece fora do header-content */}
+      <nav className={`nav-header mobile-nav ${isMenuOpen ? "active" : ""}`}>
+        <ul>
+          <li>
+            <a href="#" onClick={(e) => scrollToSection(e, "parcerias")}>
+              Divulgações
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={(e) => scrollToSection(e, "metricas")}>
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={(e) => scrollToSection(e, "depoimentos")}>
+              Depoimentos
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={(e) => scrollToSection(e, "parceiros")}>
+              Parcerias
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={(e) => scrollToSection(e, "faq")}>
+              FAQ
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              onClick={(e) => scrollToSection(e, "faleConosco")}
+              className="contact-button"
+            >
+              Seja um parceiro!
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
