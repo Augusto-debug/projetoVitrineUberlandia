@@ -1,0 +1,140 @@
+
+
+
+.secaoMetricas {
+    position: relative;
+    overflow: hidden;
+    padding: 64px 20px;
+    min-height: 70vh;
+}
+
+.metricasTipoUm,
+.metricasTipoDois {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center; 
+    align-items: center; 
+    border: 1px solid #7D0000;
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #FAFAFA;
+    font-size: 1.4rem;
+    gap: 10px;
+}
+
+.secaoMetricas::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/udi-noite.jpg') center center/cover no-repeat;
+    opacity: 0.35;
+    z-index: 0;
+    clip-path: polygon(0 45%, 100% 30%, 100% 100%, 0 100%);
+    pointer-events: none;
+}
+
+.containerMetricas {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.containerMetricas>div {
+    margin: 20px;
+}
+
+.secaoMetricas::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 247px;
+    height: 247px;
+    background: url('/vetor-metricas.svg') no-repeat left top;
+    background-size: contain;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .secaoMetricas {
+        padding: 40px 15px;
+        min-height: auto;
+    }
+    
+    .conteudoMetricas {
+        padding: 15px;
+    }
+    
+    .metricasTipoUm,
+    .metricasTipoDois {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 250px;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .containerMetricas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .containerMetricas>div {
+        margin: 0;
+    }
+    
+    .secaoMetricas::before {
+        width: 150px;
+        height: 150px;
+        top: -5%;
+    }
+}
+
+/* Responsividade para mobile */
+@media (max-width: 480px) {
+    .secaoMetricas {
+        padding: 30px 10px;
+    }
+    
+    .conteudoMetricas {
+        padding: 10px;
+    }
+    
+    .metricasTipoUm,
+    .metricasTipoDois {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 200px;
+        padding: 12px;
+        font-size: 1.1rem;
+        gap: 15px;
+    }
+    
+    .containerMetricas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .containerMetricas>div {
+        margin: 0;
+    }
+    
+    .secaoMetricas::before {
+        width: 100px;
+        height: 100px;
+        top: -3%;
+    }
+}

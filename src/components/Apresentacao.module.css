@@ -1,0 +1,18 @@
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.apresentacao h3 {
+    font-size: 39px;
+    margin: 10px ;
+}
+
+.apresentacao p {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+}
