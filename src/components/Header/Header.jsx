@@ -21,60 +21,60 @@ const Header = () => {
 
   return (
     <header className="header-container">
-      <div>
-              <img src="/ericaLogo.svg" alt="logo" />
+      <div className="header-content">
+        <img src="/ericaLogo.svg" alt="logo" />
 
-      <button
-        className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
-      >
-        <span className="hamburger-line"></span>
-        <span className="hamburger-line"></span>
-        <span className="hamburger-line"></span>
-      </button>
+        <button
+          className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
 
-      <nav className={`nav-header ${isMenuOpen ? "active" : ""}`}>
-        <ul>
-        <li>
-            <a href="#parcerias" onClick={() => scrollToSection("parcerias")}>
-              Divulgações
-            </a>
-          </li>
-          <li>
-            <a href="#metricas" onClick={() => scrollToSection("metricas")}>
-              Métricas
-            </a>
-          </li>
-          <li>
-            <a
-              href="#depoimentos"
-              onClick={() => scrollToSection("depoimentos")}
-            >
-              Depoimentos
-            </a>
-          </li>
-          <li>
-            <a href="#parceiros" onClick={() => scrollToSection("parceiros")}>
-              Parcerias
-            </a>
-          </li>
-          <li>
-            <a href="#faq" onClick={() => scrollToSection("faq")}>
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#faleConosco" 
-              onClick={() => scrollToSection("faleConosco")}
-              className="contact-button"
-            >
-              Seja um parceiro!
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav className={`nav-header ${isMenuOpen ? "active" : ""}`}>
+          <ul>
+            <li>
+              <a href="#parcerias" onClick={() => scrollToSection("parcerias")}>
+                Divulgações
+              </a>
+            </li>
+            <li>
+              <a href="#metricas" onClick={() => scrollToSection("metricas")}>
+                Métricas
+              </a>
+            </li>
+            <li>
+              <a
+                href="#depoimentos"
+                onClick={() => scrollToSection("depoimentos")}
+              >
+                Depoimentos
+              </a>
+            </li>
+            <li>
+              <a href="#parceiros" onClick={() => scrollToSection("parceiros")}>
+                Parcerias
+              </a>
+            </li>
+            <li>
+              <a href="#faq" onClick={() => scrollToSection("faq")}>
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a
+                href="#faleConosco"
+                onClick={() => scrollToSection("faleConosco")}
+                className="contact-button"
+              >
+                Seja um parceiro!
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );
