@@ -43,7 +43,6 @@
     width: 1200px;
     margin: auto;
     padding: 20px;
-    border: 1px solid green;
 }
 
 .contactForm {
@@ -184,12 +183,11 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     width: 100%;
-    max-width: 900px;
     margin-top: 0;
     position: relative;
     z-index: 1;
-    justify-items: start;
-    align-items: start;
+    justify-items: center;
+    align-items: center;
 }
 
 .contactInfoWrapper>div {

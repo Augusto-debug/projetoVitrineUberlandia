@@ -13,7 +13,7 @@ function SecaoParceiros() {
 
   return (
     <section id='parceiros' className={styles.secaoParceiros}>
-      <div>
+      <div className={styles.containerPai}>
         <div className={styles.conteudoTexto}> 
           <h2>Conheça nossos parceiros</h2>
           <p>
