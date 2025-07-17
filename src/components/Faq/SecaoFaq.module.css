@@ -1,16 +1,22 @@
 .secaoFaq {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 40px 20px;
     gap: 20px;
     align-items: center; 
     text-align: center; 
+    min-height: 70vh;
+    box-sizing: border-box;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.secaoFaq h3 {
-    font-size: 1.5em; 
-    margin-bottom: 5px; 
+.secaoFaq h1 {
+    font-size: 3.5rem; 
+    margin-bottom: 40px; 
     color: white; 
+    font-weight: bold;
 }
 
 .secaoFaq h2 {
@@ -19,10 +25,21 @@
     color: white; 
 }
 
+.secaoFaq > div {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .secaoFaq p {
     padding: 10px 20px;
+    font-size: 1.4rem;
     color: white; 
     max-width: 800px; 
+    line-height: 1.6;
 }
 
 .secaoFaq details {
@@ -33,22 +50,24 @@
     max-width: 800px; 
     overflow: hidden; 
     border: none; 
-    padding-top: 10px;
+    padding-top: 20px;
+    box-sizing: border-box;
 }
 
 .secaoFaq summary {
-    padding: 0 10px 15px 0; 
+    padding: 0 20px 20px 0; 
     font-weight: bold;
     cursor: pointer;
     display: flex; 
-    align-items: flex-start; 
+    align-items: center; 
     justify-content: space-between;
     color: white; 
     background-color: transparent; 
     border-bottom: none;
     border-top: none; 
-
     list-style: none;
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 .secaoFaq summary::-webkit-details-marker {
@@ -59,7 +78,7 @@
     content: '\25BC';
     font-size: 1.2em;
     color: white;
-    margin-left: 10px; 
+    margin-left: 15px; 
     flex-shrink: 0; 
     transition: transform 0.3s ease; 
 }
@@ -69,15 +88,457 @@
 }
 
 .secaoFaq details p {
-    font-size: 18px;
-    padding: 15px 20px 10px 0; 
+    font-size: 1.1rem;
+    padding: 20px 30px 15px 0; 
     background-color: transparent; 
     border-top: none;
     text-align: left; 
     margin-top: 0; 
     margin-bottom: 0; 
+    line-height: 1.6;
+    color: white;
 }
 
 .secaoFaq details + details {
     border-top: 1px solid rgba(255, 255, 255, 0.5); 
+}
+
+/* ========== SISTEMA DE RESPONSIVIDADE PROPORCIONAL ========== */
+
+/* Desktops grandes (>1400px) - Escala 110% */
+@media (min-width: 1400px) {
+    .secaoFaq {
+        padding: 50px 25px;
+        gap: 25px;
+        min-height: 75vh;
+    }
+    
+    .secaoFaq h1 {
+        font-size: 4rem;
+        margin-bottom: 50px;
+    }
+    
+    .secaoFaq h2 {
+        font-size: 2.8em;
+        margin-bottom: 25px;
+    }
+    
+    .secaoFaq > div {
+        gap: 25px;
+        max-width: 900px;
+    }
+    
+    .secaoFaq p {
+        font-size: 1.6rem;
+        padding: 12px 25px;
+    }
+    
+    .secaoFaq details {
+        padding-top: 25px;
+    }
+    
+    .secaoFaq summary {
+        padding: 0 25px 25px 0;
+        font-size: 1.4rem;
+    }
+    
+    .secaoFaq summary::after {
+        font-size: 1.4em;
+        margin-left: 18px;
+    }
+    
+    .secaoFaq details p {
+        font-size: 1.3rem;
+        padding: 25px 35px 18px 0;
+    }
+}
+
+/* Tablets grandes e desktops pequenos (1024px - 1400px) - Escala 95% */
+@media (max-width: 1400px) and (min-width: 1024px) {
+    .secaoFaq {
+        padding: 38px 22px;
+        gap: 22px;
+        min-height: 68vh;
+    }
+    
+    .secaoFaq h1 {
+        font-size: 3.3rem;
+        margin-bottom: 38px;
+    }
+    
+    .secaoFaq h2 {
+        font-size: 2.4em;
+        margin-bottom: 22px;
+    }
+    
+    .secaoFaq > div {
+        gap: 22px;
+        max-width: 760px;
+    }
+    
+    .secaoFaq p {
+        font-size: 1.35rem;
+        padding: 11px 22px;
+    }
+    
+    .secaoFaq details {
+        padding-top: 22px;
+    }
+    
+    .secaoFaq summary {
+        padding: 0 22px 22px 0;
+        font-size: 1.15rem;
+    }
+    
+    .secaoFaq summary::after {
+        font-size: 1.15em;
+        margin-left: 16px;
+    }
+    
+    .secaoFaq details p {
+        font-size: 1.05rem;
+        padding: 22px 32px 16px 0;
+    }
+}
+
+/* Tablets médios (768px - 1024px) - Escala 85% */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .secaoFaq {
+        padding: 35px 18px;
+        gap: 18px;
+        min-height: 60vh;
+    }
+    
+    .secaoFaq h1 {
+        font-size: 3rem;
+        margin-bottom: 35px;
+    }
+    
+    .secaoFaq h2 {
+        font-size: 2.1em;
+        margin-bottom: 18px;
+    }
+    
+    .secaoFaq > div {
+        gap: 18px;
+        max-width: 680px;
+    }
+    
+    .secaoFaq p {
+        font-size: 1.2rem;
+        padding: 9px 18px;
+    }
+    
+    .secaoFaq details {
+        padding-top: 18px;
+    }
+    
+    .secaoFaq summary {
+        padding: 0 18px 18px 0;
+        font-size: 1.05rem;
+    }
+    
+    .secaoFaq summary::after {
+        font-size: 1.05em;
+        margin-left: 14px;
+    }
+    
+    .secaoFaq details p {
+        font-size: 0.95rem;
+        padding: 18px 28px 14px 0;
+    }
+}
+
+/* Tablets pequenos e mobiles grandes (600px - 768px) - Escala 75% */
+@media (max-width: 768px) {
+    .secaoFaq {
+        padding: 30px 15px;
+        gap: 15px;
+        min-height: 55vh;
+    }
+    
+    .secaoFaq h1 {
+        font-size: 2.6rem;
+        margin-bottom: 30px;
+    }
+    
+    .secaoFaq h2 {
+        font-size: 1.9em;
+        margin-bottom: 15px;
+    }
+    
+    .secaoFaq > div {
+        gap: 15px;
+        max-width: 600px;
+    }
+    
+    .secaoFaq p {
+        font-size: 1.1rem;
+        padding: 8px 15px;
+    }
+    
+    .secaoFaq details {
+        padding-top: 15px;
+    }
+    
+    .secaoFaq summary {
+        padding: 0 15px 15px 0;
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+    
+    .secaoFaq summary::after {
+        font-size: 1em;
+        margin-left: 12px;
+    }
+    
+    .secaoFaq details p {
+        font-size: 0.9rem;
+        padding: 15px 25px 12px 0;
+        line-height: 1.5;
+    }
+}
+
+/* Mobiles médios (480px - 600px) - Escala 65% */
+@media (max-width: 600px) {
+    .secaoFaq {
+        padding: 25px 12px;
+        gap: 12px;
+        min-height: 50vh;
+    }
+    
+    .secaoFaq h1 {
+        font-size: 2.3rem;
+        margin-bottom: 25px;
+    }
+    
+    .secaoFaq h2 {
+        font-size: 1.6em;
+        margin-bottom: 12px;
+    }
+    
+    .secaoFaq > div {
+        gap: 12px;
+        max-width: 520px;
+    }
+    
+    .secaoFaq p {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+    
+    .secaoFaq details {
+        padding-top: 12px;
+    }
+    
+    .secaoFaq summary {
+        padding: 0 12px 12px 0;
+        font-size: 0.95rem;
+    }
+    
+    .secaoFaq summary::after {
+        font-size: 0.95em;
+        margin-left: 10px;
+    }
+    
+    .secaoFaq details p {
+        font-size: 0.85rem;
+        padding: 12px 22px 10px 0;
+    }
+}
+
+/* Mobiles pequenos (até 480px) - Escala 55% */
+@media (max-width: 480px) {
+    .secaoFaq {
+        padding: 20px 10px;
+        gap: 10px;
+        min-height: 45vh;
+    }
+    
+    .secaoFaq h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .secaoFaq h2 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+    
+    .secaoFaq > div {
+        gap: 10px;
+        max-width: 450px;
+    }
+    
+    .secaoFaq p {
+        font-size: 0.95rem;
+        padding: 5px 10px;
+    }
+    
+    .secaoFaq details {
+        padding-top: 10px;
+    }
+    
+    .secaoFaq summary {
+        padding: 0 10px 10px 0;
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+    
+    .secaoFaq summary::after {
+        font-size: 0.9em;
+        margin-left: 8px;
+    }
+    
+    .secaoFaq details p {
+        font-size: 0.8rem;
+        padding: 10px 20px 8px 0;
+        line-height: 1.4;
+    }
+}
+
+/* Mobiles muito pequenos (até 360px) - Escala 50% */
+@media (max-width: 360px) {
+    .secaoFaq {
+        padding: 18px 8px;
+        gap: 8px;
+        min-height: 40vh;
+    }
+    
+    .secaoFaq h1 {
+        font-size: 1.8rem;
+        margin-bottom: 18px;
+    }
+    
+    .secaoFaq h2 {
+        font-size: 1.25em;
+        margin-bottom: 8px;
+    }
+    
+    .secaoFaq > div {
+        gap: 8px;
+        max-width: 400px;
+    }
+    
+    .secaoFaq p {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+    }
+    
+    .secaoFaq details {
+        padding-top: 8px;
+    }
+    
+    .secaoFaq summary {
+        padding: 0 8px 8px 0;
+        font-size: 0.8rem;
+        line-height: 1.1;
+    }
+    
+    .secaoFaq summary::after {
+        font-size: 0.8em;
+        margin-left: 6px;
+    }
+    
+    .secaoFaq details p {
+        font-size: 0.75rem;
+        padding: 8px 18px 6px 0;
+        line-height: 1.3;
+    }
+}
+
+/* Mobiles micro (até 320px) - Escala 45% */
+@media (max-width: 320px) {
+    .secaoFaq {
+        padding: 15px 5px;
+        gap: 6px;
+    }
+    
+    .secaoFaq h1 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    
+    .secaoFaq h2 {
+        font-size: 1.1em;
+        margin-bottom: 6px;
+    }
+    
+    .secaoFaq > div {
+        gap: 6px;
+        max-width: 350px;
+    }
+    
+    .secaoFaq p {
+        font-size: 0.8rem;
+        padding: 3px 6px;
+    }
+    
+    .secaoFaq details {
+        padding-top: 6px;
+    }
+    
+    .secaoFaq summary {
+        padding: 0 6px 6px 0;
+        font-size: 0.75rem;
+    }
+    
+    .secaoFaq summary::after {
+        font-size: 0.75em;
+        margin-left: 5px;
+    }
+    
+    .secaoFaq details p {
+        font-size: 0.7rem;
+        padding: 6px 15px 5px 0;
+    }
+}
+
+/* Ajustes para landscape em mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .secaoFaq {
+        min-height: 80vh;
+        padding: 15px;
+        gap: 8px;
+    }
+    
+    .secaoFaq h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .secaoFaq h2 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    
+    .secaoFaq > div {
+        gap: 8px;
+        max-width: 600px;
+    }
+    
+    .secaoFaq p {
+        font-size: 0.85rem;
+        padding: 3px 8px;
+    }
+    
+    .secaoFaq details {
+        padding-top: 8px;
+    }
+    
+    .secaoFaq summary {
+        padding: 0 8px 5px 0;
+        font-size: 0.8rem;
+    }
+    
+    .secaoFaq summary::after {
+        font-size: 0.8em;
+        margin-left: 5px;
+    }
+    
+    .secaoFaq details p {
+        font-size: 0.75rem;
+        padding: 5px 15px 3px 0;
+        line-height: 1.2;
+    }
 }

@@ -1,5 +1,5 @@
 :root {
-  --text-primary: background-color: #FAFAFA;
+  --text-primary: #FAFAFA;
 }
 
 .secaoDepoimentos {
@@ -11,18 +11,23 @@
   padding: 40px 20px;
   overflow: hidden;
   min-height: 70vh;
+  box-sizing: border-box;
 }
 
 .conteudoDepoimentos {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-.secaoDepoimentos h3 {
+.secaoDepoimentos h1 {
   color: white;
+  font-size: 3.5rem;
   font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .containerImagemDepoimentos {
@@ -36,27 +41,172 @@
   border-radius: 16px;
   overflow: hidden;
   height: 500px;
+  box-sizing: border-box;
 }
 
 .containerImagemDepoimentos > div:nth-child(1) {
-  width: 340px;
-  min-width: 340px;
-  max-width: 340px;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #FAFAFA;
+  position: relative;
+  overflow: hidden;
 }
 
 .imagemConsultora {
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Mudança principal: contain para mostrar foto completa */
   object-position: center;
   display: block;
   border: none;
   outline: none;
+  background-color: #FAFAFA;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ========== RESPONSIVIDADE DA IMAGEM CONSULTORA ========== */
+
+/* Desktop grande */
+@media (min-width: 1400px) {
+  .containerImagemDepoimentos > div:nth-child(1) {
+    width: 380px;
+    min-width: 380px;
+    max-width: 380px;
+  }
+  
+  .imagemConsultora {
+    width: 100%;
+    position: static;
+    transform: none;
+    left: auto;
+    object-fit: contain;
+  }
+}
+
+/* Desktop médio */
+@media (max-width: 1400px) and (min-width: 1024px) {
+  .containerImagemDepoimentos > div:nth-child(1) {
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+  }
+  
+  .imagemConsultora {
+    width: 100%;
+    position: static;
+    transform: none;
+    left: auto;
+    object-fit: contain;
+  }
+}
+
+/* Tablet médio */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .containerImagemDepoimentos > div:nth-child(1) {
+    width: 290px;
+    min-width: 290px;
+    max-width: 290px;
+  }
+  
+  .imagemConsultora {
+    width: 100%;
+    position: static;
+    transform: none;
+    left: auto;
+    object-fit: contain;
+  }
+}
+
+/* Mobile grande - layout vertical */
+@media (max-width: 768px) {
+  .containerImagemDepoimentos > div:nth-child(1) {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    height: 250px;
+  }
+  
+  .imagemConsultora {
+    width: 100vw;
+    height: 100%;
+    object-fit: contain; /* Mostra foto completa */
+    object-position: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+/* Mobile médio */
+@media (max-width: 600px) {
+  .containerImagemDepoimentos > div:nth-child(1) {
+    height: 220px;
+  }
+  
+  .imagemConsultora {
+    object-fit: contain; /* Mostra foto completa */
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .containerImagemDepoimentos > div:nth-child(1) {
+    height: 190px;
+  }
+  
+  .imagemConsultora {
+    object-fit: contain;
+    border-radius: 8px;
+  }
+}
+
+/* Mobile muito pequeno */
+@media (max-width: 360px) {
+  .containerImagemDepoimentos > div:nth-child(1) {
+    height: 170px;
+  }
+  
+  .imagemConsultora {
+    object-fit: contain; /* Mostra foto completa */
+    border-radius: 6px 6px 0 0;
+  }
+}
+
+/* Mobile micro */
+@media (max-width: 320px) {
+  .containerImagemDepoimentos > div:nth-child(1) {
+    height: 150px;
+  }
+  
+  .imagemConsultora {
+    object-fit: contain; /* Mostra foto completa */
+  }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .containerImagemDepoimentos > div:nth-child(1) {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    height: 100%;
+  }
+  
+  .imagemConsultora {
+    width: 100%;
+    object-fit: contain; /* Mostra foto completa */
+    position: static;
+    transform: none;
+    left: auto;
+    border-radius: 8px 0 0 8px;
+  }
 }
 
 .containerImagemDepoimentos > div:nth-child(2) {
@@ -64,7 +214,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 24px 16px;
   background-color: #FAFAFA;
-  padding: 32px 32px 32px 32px;
+  padding: 32px;
   background-image: url('/vetor-depoimentos.svg');
   background-repeat: no-repeat;
   background-position: left center;
@@ -72,85 +222,325 @@
   flex: 1;
   height: 100%;
   align-content: center;
+  box-sizing: border-box;
 }
 
-/* Responsividade para tablets */
+/* ========== SISTEMA DE RESPONSIVIDADE PROPORCIONAL ========== */
+
+/* Desktops grandes (>1400px) - Escala 110% */
+@media (min-width: 1400px) {
+  .secaoDepoimentos {
+    padding: 50px 25px;
+    min-height: 75vh;
+  }
+  
+  .conteudoDepoimentos {
+    padding: 25px;
+  }
+  
+  .secaoDepoimentos h1 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+  }
+  
+  .containerImagemDepoimentos {
+    height: 560px;
+    border-radius: 18px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(1) {
+    width: 380px;
+    min-width: 380px;
+    max-width: 380px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(2) {
+    gap: 28px 18px;
+    padding: 38px;
+    background-size: 200px auto;
+  }
+}
+
+/* Tablets grandes e desktops pequenos (1024px - 1400px) - Escala 95% */
+@media (max-width: 1400px) and (min-width: 1024px) {
+  .secaoDepoimentos {
+    padding: 38px 22px;
+    min-height: 68vh;
+  }
+  
+  .conteudoDepoimentos {
+    padding: 22px;
+  }
+  
+  .secaoDepoimentos h1 {
+    font-size: 3.3rem;
+    margin-bottom: 38px;
+  }
+  
+  .containerImagemDepoimentos {
+    height: 475px;
+    border-radius: 15px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(1) {
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(2) {
+    gap: 22px 15px;
+    padding: 30px;
+    background-size: 170px auto;
+  }
+}
+
+/* Tablets médios (768px - 1024px) - Escala 85% */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .secaoDepoimentos {
+    padding: 35px 18px;
+    min-height: 60vh;
+  }
+  
+  .conteudoDepoimentos {
+    padding: 18px;
+  }
+  
+  .secaoDepoimentos h1 {
+    font-size: 3rem;
+    margin-bottom: 35px;
+  }
+  
+  .containerImagemDepoimentos {
+    height: 425px;
+    border-radius: 14px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(1) {
+    width: 290px;
+    min-width: 290px;
+    max-width: 290px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(2) {
+    gap: 20px 14px;
+    padding: 28px;
+    background-size: 150px auto;
+  }
+}
+
+/* Tablets pequenos e mobiles grandes (600px - 768px) - Escala 75% */
 @media (max-width: 768px) {
   .secaoDepoimentos {
-    padding: 40px 15px;
-    min-height: auto;
+    padding: 30px 15px;
+    min-height: 55vh;
   }
   
   .conteudoDepoimentos {
     padding: 15px;
   }
   
+  .secaoDepoimentos h1 {
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+  }
+  
   .containerImagemDepoimentos {
     flex-direction: column;
     height: auto;
-    width: 100%;
+    border-radius: 12px;
   }
 
   .containerImagemDepoimentos > div:nth-child(1) {
-    margin: auto;
     width: 100%;
+    min-width: auto;
+    max-width: none;
+    height: 250px;
   }
+  
+  .imagemConsultora {
+    border-radius: 12px 12px 0 0;
+  }
+  
   .containerImagemDepoimentos > div:nth-child(2) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
     padding: 25px;
     background-size: 120px auto;
-    width: 100%;
     height: auto;
-    align-self: center;
-    align-items: start;
-  }
-  .imagemConsultora {
-    border-radius: 16px;
-    width: 100vw;
+    align-content: start;
   }
 }
 
-/* Responsividade para mobile */
+/* Mobiles médios (480px - 600px) - Escala 65% */
+@media (max-width: 600px) {
+  .secaoDepoimentos {
+    padding: 25px 12px;
+    min-height: 50vh;
+  }
+  
+  .conteudoDepoimentos {
+    padding: 12px;
+  }
+  
+  .secaoDepoimentos h1 {
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+  }
+  
+  .containerImagemDepoimentos {
+    border-radius: 10px;
+  }
+
+  .containerImagemDepoimentos > div:nth-child(1) {
+    height: 220px;
+  }
+  
+  .imagemConsultora {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(2) {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background-size: 100px auto;
+  }
+}
+
+/* Mobiles pequenos (até 480px) - Escala 55% */
 @media (max-width: 480px) {
   .secaoDepoimentos {
-    padding: 30px 10px;
+    padding: 20px 10px;
+    min-height: 45vh;
   }
   
   .conteudoDepoimentos {
     padding: 10px;
   }
   
+  .secaoDepoimentos h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
   .containerImagemDepoimentos {
-    flex-direction: column;
-    height: auto;
-    background-color: #FAFAFA;  
-    border-radius: 16px;
-    gap: 20px;
+    border-radius: 8px;
   }
   
   .containerImagemDepoimentos > div:nth-child(1) {
-    width: 100%;
-    height: auto;
-    background-color: transparent;
+    height: 190px;
   }
   
   .imagemConsultora {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
+    border-radius: 8px 8px 0 0;
   }
   
   .containerImagemDepoimentos > div:nth-child(2) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 18px;
     background: none;
-    width: 100%;
-    align-items: start;
   }
 }
 
+/* Mobiles muito pequenos (até 360px) - Escala 50% */
+@media (max-width: 360px) {
+  .secaoDepoimentos {
+    padding: 18px 8px;
+    min-height: 40vh;
+  }
+  
+  .conteudoDepoimentos {
+    padding: 8px;
+  }
+  
+  .secaoDepoimentos h1 {
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+  }
+  
+  .containerImagemDepoimentos {
+    border-radius: 6px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(1) {
+    height: 170px;
+  }
+  
+  .imagemConsultora {
+    border-radius: 6px 6px 0 0;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(2) {
+    gap: 10px;
+    padding: 15px;
+  }
+}
+
+/* Mobiles micro (até 320px) - Escala 45% */
+@media (max-width: 320px) {
+  .secaoDepoimentos {
+    padding: 15px 5px;
+  }
+  
+  .conteudoDepoimentos {
+    padding: 5px;
+  }
+  
+  .secaoDepoimentos h1 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(1) {
+    height: 150px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(2) {
+    gap: 8px;
+    padding: 12px;
+  }
+}
+
+/* Ajustes para landscape em mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .secaoDepoimentos {
+    min-height: 80vh;
+    padding: 15px;
+  }
+  
+  .secaoDepoimentos h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .containerImagemDepoimentos {
+    flex-direction: row;
+    height: 300px;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(1) {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    height: 100%;
+  }
+  .imagemConsultora {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mostra a imagem inteira */
+    object-position: center;
+    display: block;
+    border: none;
+    outline: none;
+    background-color: #FAFAFA;
+  }
+  
+  .containerImagemDepoimentos > div:nth-child(2) {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 15px;
+    background-size: 80px auto;
+  }
+}

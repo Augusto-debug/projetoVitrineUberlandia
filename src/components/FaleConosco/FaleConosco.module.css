@@ -2,10 +2,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow-x: hidden; /* Previne overflow horizontal */
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
-
-
 
 .topSection {
     width: 100%;
@@ -13,10 +12,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     filter: none;
     -webkit-filter: none;
-
     padding: 60px 20px 0;
     color: white;
     text-align: center;
@@ -27,6 +24,7 @@
     min-height: 550px;
     position: relative;
     z-index: 20;
+    box-sizing: border-box;
 }
 
 .topSection::before {
@@ -42,15 +40,15 @@
 
 .topSection > div, .bottomSection > div{
     width: 100%;
-    max-width: 1200px; /* Mudança principal: max-width ao invés de width fixo */
+    max-width: 1400px;
     margin: auto;
     padding: 20px;
-    box-sizing: border-box; /* Garante que padding não cause overflow */
+    box-sizing: border-box;
 }
 
 .contactForm {
     width: 100%;
-    max-width: 510px;
+    max-width: 580px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -65,19 +63,20 @@
     align-self: flex-end;
     text-align: left;
     align-items: center;
-    box-sizing: border-box; /* Garante que padding não cause overflow */
+    box-sizing: border-box;
 }
 
-.contactForm h2 {
-    font-size: 2.8em;
-    margin-bottom: 10px;
+.contactForm h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
     color: #000000;
     text-align: left;
     width: 100%;
+    font-weight: bold;
 }
 
 .contactForm p {
-    font-size: 1.1em;
+    font-size: 1.4rem;
     margin-bottom: 30px;
     line-height: 1.5;
     color: #334155;
@@ -95,7 +94,7 @@
 .contactForm label {
     font-weight: bold;
     margin-bottom: 8px;
-    font-size: 1em;
+    font-size: 1rem;
     color: #94A3B8;
 }
 
@@ -106,7 +105,7 @@
     padding: 12px;
     border: 1px solid #C9C9C9;
     border-radius: 8px;
-    font-size: 1em;
+    font-size: 1rem;
     width: 100%;
     box-sizing: border-box;
     background-color: #F8FAFC;
@@ -128,10 +127,10 @@
 .contactForm button {
     background-color: #7D0000;
     color: white;
-    padding: 10px 15px;
+    padding: 15px 30px;
     border: none;
     border-radius: 8px;
-    font-size: 1em;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -177,10 +176,8 @@
     align-items: flex-start;
     position: relative;
     z-index: 10;
-    box-sizing: border-box; /* Previne overflow */
+    box-sizing: border-box;
 }
-
-
 
 .contactInfoWrapper {
     display: grid;
@@ -208,7 +205,7 @@
 }
 
 .contactInfoWrapper h4 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: white;
     display: flex;
@@ -224,7 +221,7 @@
 }
 
 .contactInfoWrapper p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     margin: 5px 0;
     color: white;
     text-align: left;
@@ -251,58 +248,246 @@
     width: 100%;
 }
 
-/* Media Queries para melhor responsividade */
+/* ========== SISTEMA DE RESPONSIVIDADE PROPORCIONAL ========== */
 
-/* Tablets grandes e desktops pequenos (1024px - 1200px) */
-@media (max-width: 1200px) {
-    .topSection > div, .bottomSection > div {
-        max-width: 95%;
-        padding: 15px;
-    }
-    
-    .contactForm {
-        margin-right: 2%;
-        max-width: 480px;
-    }
-    
-    .contactInfoWrapper {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 25px;
-    }
-}
-
-/* Tablets (768px - 1024px) */
-@media (max-width: 1024px) {
+/* Desktops grandes (>1400px) - Escala 110% */
+@media (min-width: 1400px) {
     .topSection {
-        min-height: 450px;
-        padding: 40px 15px 0;
+        padding: 70px 25px 0;
+        min-height: 620px;
     }
     
     .topSection > div, .bottomSection > div {
-        padding: 15px;
-    }
-    
-    .contactForm {
-        max-width: 450px;
-        margin-right: 5%;
         padding: 25px;
     }
     
-    .contactForm h2 {
-        font-size: 2.4em;
+    .contactForm {
+        max-width: 650px;
+        padding: 35px;
+        gap: 25px;
+        margin-right: 5%;
+    }
+    
+    .contactForm h1 {
+        font-size: 4rem;
+        margin-bottom: 25px;
+    }
+    
+    .contactForm p {
+        font-size: 1.6rem;
+        margin-bottom: 35px;
+    }
+    
+    .contactForm label {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm input[type="tel"],
+    .contactForm textarea {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+    
+    .contactForm textarea {
+        min-height: 120px;
+    }
+    
+    .contactForm button {
+        padding: 18px 35px;
+        font-size: 1.4rem;
     }
     
     .bottomSection {
-        padding: 80px 15px 50px 15px;
+        padding: 140px 25px 70px 25px;
     }
     
     .contactInfoWrapper {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        gap: 35px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    .contactInfoWrapper h4 {
+        font-size: 1.7rem;
+        margin-bottom: 12px;
+        gap: 12px;
+    }
+    
+    .contactInfoWrapper h4 svg {
+        font-size: 1.9em;
+    }
+    
+    .contactInfoWrapper p {
+        font-size: 1.3rem;
+        margin: 6px 0;
+    }
+    
+    .contactItem {
+        gap: 12px;
     }
 }
 
-/* Tablets pequenos (600px - 768px) */
+/* Tablets grandes e desktops pequenos (1024px - 1400px) - Escala 95% */
+@media (max-width: 1400px) and (min-width: 1024px) {
+    .topSection {
+        padding: 58px 22px 0;
+        min-height: 525px;
+    }
+    
+    .topSection > div, .bottomSection > div {
+        padding: 22px;
+    }
+    
+    .contactForm {
+        max-width: 550px;
+        padding: 28px;
+        gap: 22px;
+        margin-right: 4%;
+    }
+    
+    .contactForm h1 {
+        font-size: 3.3rem;
+        margin-bottom: 22px;
+    }
+    
+    .contactForm p {
+        font-size: 1.35rem;
+        margin-bottom: 28px;
+    }
+    
+    .contactForm label {
+        font-size: 1.05rem;
+        margin-bottom: 9px;
+    }
+    
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm input[type="tel"],
+    .contactForm textarea {
+        padding: 13px;
+        font-size: 1.05rem;
+    }
+    
+    .contactForm textarea {
+        min-height: 110px;
+    }
+    
+    .contactForm button {
+        padding: 16px 32px;
+        font-size: 1.25rem;
+    }
+    
+    .bottomSection {
+        padding: 115px 22px 58px 22px;
+    }
+    
+    .contactInfoWrapper {
+        gap: 28px;
+        grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    }
+    
+    .contactInfoWrapper h4 {
+        font-size: 1.45rem;
+        margin-bottom: 11px;
+        gap: 11px;
+    }
+    
+    .contactInfoWrapper h4 svg {
+        font-size: 1.65em;
+    }
+    
+    .contactInfoWrapper p {
+        font-size: 1.15rem;
+        margin: 5px 0;
+    }
+    
+    .contactItem {
+        gap: 11px;
+    }
+}
+
+/* Tablets médios (768px - 1024px) - Escala 85% */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .topSection {
+        padding: 50px 18px 0;
+        min-height: 470px;
+    }
+    
+    .topSection > div, .bottomSection > div {
+        padding: 18px;
+    }
+    
+    .contactForm {
+        max-width: 490px;
+        padding: 25px;
+        gap: 18px;
+        margin-right: 4%;
+    }
+    
+    .contactForm h1 {
+        font-size: 3rem;
+        margin-bottom: 18px;
+    }
+    
+    .contactForm p {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .contactForm label {
+        font-size: 0.95rem;
+        margin-bottom: 7px;
+    }
+    
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm input[type="tel"],
+    .contactForm textarea {
+        padding: 11px;
+        font-size: 0.95rem;
+    }
+    
+    .contactForm textarea {
+        min-height: 90px;
+    }
+    
+    .contactForm button {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+    }
+    
+    .bottomSection {
+        padding: 100px 18px 50px 18px;
+    }
+    
+    .contactInfoWrapper {
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .contactInfoWrapper h4 {
+        font-size: 1.3rem;
+        margin-bottom: 9px;
+        gap: 9px;
+    }
+    
+    .contactInfoWrapper h4 svg {
+        font-size: 1.45em;
+    }
+    
+    .contactInfoWrapper p {
+        font-size: 1rem;
+        margin: 4px 0;
+    }
+    
+    .contactItem {
+        gap: 9px;
+    }
+}
+
+/* Tablets pequenos e mobiles grandes (600px - 768px) - Escala 75% */
 @media (max-width: 768px) {
     .topSection {
         background-image: none;
@@ -320,26 +505,50 @@
     .topSection > div {
         width: 100%;
         max-width: 100%;
-        padding: 10px;
+        padding: 15px;
     }
 
     .contactForm {
         max-width: 95%;
         margin: 0 auto;
         align-self: center;
-        margin-bottom: 0;
         padding: 20px;
+        gap: 15px;
     }
 
-    .contactForm h2 {
-        font-size: 2.2em;
+    .contactForm h1 {
+        font-size: 2.6rem;
         text-align: center;
         margin-bottom: 15px;
     }
 
     .contactForm p {
+        font-size: 1.1rem;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .contactForm label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+    
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm input[type="tel"],
+    .contactForm textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .contactForm textarea {
+        min-height: 80px;
+    }
+    
+    .contactForm button {
+        padding: 12px 25px;
+        font-size: 1rem;
+        width: 100%;
     }
 
     .bottomSection {
@@ -351,11 +560,7 @@
     .bottomSection > div {
         width: 100%;
         max-width: 100%;
-        padding: 10px;
-    }
-
-    .contactForm {
-        gap: 15px;
+        padding: 15px;
     }
 
     .contactInfoWrapper {
@@ -373,45 +578,81 @@
 
     .contactInfoWrapper h4 {
         text-align: center;
-        font-size: 1.4em;
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+        gap: 8px;
     }
 
     .contactInfoWrapper h4 svg {
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
 
     .contactInfoWrapper p {
         text-align: center;
-        font-size: 1em;
+        font-size: 0.95rem;
+        margin: 3px 0;
     }
 
     .contactItem {
         justify-content: center;
+        gap: 8px;
     }
 }
 
-/* Mobile pequeno (400px - 600px) */
+/* Mobiles médios (480px - 600px) - Escala 65% */
 @media (max-width: 600px) {
     .topSection {
-        padding: 30px 10px;
+        padding: 30px 12px;
+    }
+    
+    .topSection > div {
+        padding: 12px;
     }
     
     .contactForm {
         max-width: 98%;
-        padding: 15px;
-        margin: 0 auto;
+        padding: 18px;
+        gap: 12px;
     }
     
-    .contactForm h2 {
-        font-size: 2em;
+    .contactForm h1 {
+        font-size: 2.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .contactForm p {
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+    
+    .contactForm label {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+    
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm input[type="tel"],
+    .contactForm textarea {
+        padding: 9px;
+        font-size: 0.85rem;
+    }
+    
+    .contactForm textarea {
+        min-height: 70px;
     }
     
     .contactForm button {
-        width: 100%;
+        padding: 11px 22px;
+        font-size: 0.95rem;
     }
     
     .bottomSection {
-        padding: 30px 10px;
+        padding: 30px 12px;
+    }
+    
+    .bottomSection > div {
+        padding: 12px;
     }
     
     .contactInfoWrapper {
@@ -419,47 +660,323 @@
     }
     
     .contactInfoWrapper h4 {
+        font-size: 1.15rem;
+        margin-bottom: 7px;
+        gap: 7px;
+    }
+    
+    .contactInfoWrapper h4 svg {
         font-size: 1.3em;
+    }
+    
+    .contactInfoWrapper p {
+        font-size: 0.9rem;
+        margin: 2px 0;
+    }
+    
+    .contactItem {
+        gap: 7px;
     }
 }
 
-/* Mobile muito pequeno (até 400px) */
-@media (max-width: 400px) {
+/* Mobiles pequenos (até 480px) - Escala 55% */
+@media (max-width: 480px) {
     .topSection {
-        padding: 20px 5px;
+        padding: 25px 10px;
+    }
+    
+    .topSection > div {
+        padding: 10px;
     }
     
     .contactForm {
         max-width: 100%;
-        padding: 12px;
-        gap: 12px;
+        padding: 15px;
+        gap: 10px;
     }
     
-    .contactForm h2 {
-        font-size: 1.8em;
+    .contactForm h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
     }
     
     .contactForm p {
-        font-size: 1em;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+    
+    .contactForm label {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
     }
     
     .contactForm input[type="text"],
     .contactForm input[type="email"],
     .contactForm input[type="tel"],
     .contactForm textarea {
-        padding: 10px;
-        font-size: 0.9em;
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+    
+    .contactForm textarea {
+        min-height: 60px;
+    }
+    
+    .contactForm button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
     
     .bottomSection {
-        padding: 20px 5px;
+        padding: 25px 10px;
+    }
+    
+    .bottomSection > div {
+        padding: 10px;
+    }
+    
+    .contactInfoWrapper {
+        gap: 12px;
     }
     
     .contactInfoWrapper h4 {
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+        gap: 6px;
+    }
+    
+    .contactInfoWrapper h4 svg {
         font-size: 1.2em;
     }
     
     .contactInfoWrapper p {
-        font-size: 0.9em;
+        font-size: 0.85rem;
+        margin: 2px 0;
+    }
+    
+    .contactItem {
+        gap: 6px;
+    }
+}
+
+/* Mobiles muito pequenos (até 360px) - Escala 50% */
+@media (max-width: 360px) {
+    .topSection {
+        padding: 20px 8px;
+    }
+    
+    .topSection > div {
+        padding: 8px;
+    }
+    
+    .contactForm {
+        padding: 12px;
+        gap: 8px;
+    }
+    
+    .contactForm h1 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .contactForm p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+    
+    .contactForm label {
+        font-size: 0.75rem;
+        margin-bottom: 3px;
+    }
+    
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm input[type="tel"],
+    .contactForm textarea {
+        padding: 7px;
+        font-size: 0.75rem;
+    }
+    
+    .contactForm textarea {
+        min-height: 50px;
+    }
+    
+    .contactForm button {
+        padding: 9px 18px;
+        font-size: 0.8rem;
+    }
+    
+    .bottomSection {
+        padding: 20px 8px;
+    }
+    
+    .bottomSection > div {
+        padding: 8px;
+    }
+    
+    .contactInfoWrapper {
+        gap: 10px;
+    }
+    
+    .contactInfoWrapper h4 {
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+        gap: 5px;
+    }
+    
+    .contactInfoWrapper h4 svg {
+        font-size: 1.1em;
+    }
+    
+    .contactInfoWrapper p {
+        font-size: 0.8rem;
+        margin: 1px 0;
+    }
+    
+    .contactItem {
+        gap: 5px;
+    }
+}
+
+/* Mobiles micro (até 320px) - Escala 45% */
+@media (max-width: 320px) {
+    .topSection {
+        padding: 18px 5px;
+    }
+    
+    .topSection > div {
+        padding: 5px;
+    }
+    
+    .contactForm {
+        padding: 10px;
+        gap: 6px;
+    }
+    
+    .contactForm h1 {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+    
+    .contactForm p {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .contactForm label {
+        font-size: 0.7rem;
+        margin-bottom: 2px;
+    }
+    
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm input[type="tel"],
+    .contactForm textarea {
+        padding: 6px;
+        font-size: 0.7rem;
+    }
+    
+    .contactForm textarea {
+        min-height: 45px;
+    }
+    
+    .contactForm button {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+    
+    .bottomSection {
+        padding: 18px 5px;
+    }
+    
+    .bottomSection > div {
+        padding: 5px;
+    }
+    
+    .contactInfoWrapper {
+        gap: 8px;
+    }
+    
+    .contactInfoWrapper h4 {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+        gap: 4px;
+    }
+    
+    .contactInfoWrapper h4 svg {
+        font-size: 1em;
+    }
+    
+    .contactInfoWrapper p {
+        font-size: 0.75rem;
+        margin: 1px 0;
+    }
+    
+    .contactItem {
+        gap: 4px;
+    }
+}
+
+/* Ajustes para landscape em mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .topSection {
+        min-height: 80vh;
+        padding: 15px;
+    }
+    
+    .topSection > div {
+        padding: 10px;
+    }
+    
+    .contactForm {
+        max-width: 450px;
+        padding: 12px;
+        gap: 8px;
+    }
+    
+    .contactForm h1 {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .contactForm p {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .contactForm label {
+        font-size: 0.75rem;
+        margin-bottom: 2px;
+    }
+    
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm input[type="tel"],
+    .contactForm textarea {
+        padding: 6px;
+        font-size: 0.75rem;
+    }
+    
+    .contactForm textarea {
+        min-height: 40px;
+    }
+    
+    .contactForm button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    
+    .bottomSection {
+        padding: 20px 15px;
+    }
+    
+    .contactInfoWrapper h4 {
+        font-size: 0.9rem;
+        margin-bottom: 3px;
+    }
+    
+    .contactInfoWrapper p {
+        font-size: 0.8rem;
     }
 }

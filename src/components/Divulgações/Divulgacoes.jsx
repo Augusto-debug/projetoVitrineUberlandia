@@ -6,7 +6,7 @@ const Parceiros = () => {
     <section id='parcerias' className={style['partners-container']}>
       <div className={style['partners-content']}>
         <div className={style['partners-header']}>
-          <h2>Sua marca na vitrine</h2>
+          <h1>Sua marca na vitrine</h1>
           <p>Destaque o melhor da sua marca: alcance, engajamento e conexões no instagram.</p>
         </div>
         

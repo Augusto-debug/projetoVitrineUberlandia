@@ -5,23 +5,135 @@
     justify-content: space-between; 
     align-items: center; 
     flex-wrap: wrap; 
-    font-size: 1em; 
+    font-size: 1rem; 
     width: 100%; 
     box-sizing: border-box;
 }
 
 .footer p {
     margin: 5px 0; 
+    font-size: 1.4rem;
     white-space: nowrap; 
 }
 
+/* ========== SISTEMA DE RESPONSIVIDADE PROPORCIONAL ========== */
+
+/* Desktops grandes (>1400px) - Escala 110% */
+@media (min-width: 1400px) {
+    .footer {
+        padding: 25px;
+        font-size: 1.1rem;
+    }
+    
+    .footer p {
+        font-size: 1.6rem;
+        margin: 6px 0;
+    }
+}
+
+/* Tablets grandes e desktops pequenos (1024px - 1400px) - Escala 95% */
+@media (max-width: 1400px) and (min-width: 1024px) {
+    .footer {
+        padding: 22px;
+        font-size: 1.05rem;
+    }
+    
+    .footer p {
+        font-size: 1.45rem;
+        margin: 5px 0;
+    }
+}
+
+/* Tablets médios (768px - 1024px) - Escala 85% */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .footer {
+        padding: 18px;
+        font-size: 0.95rem;
+    }
+    
+    .footer p {
+        font-size: 1.3rem;
+        margin: 4px 0;
+    }
+}
+
+/* Tablets pequenos e mobiles grandes (600px - 768px) - Escala 75% */
 @media (max-width: 768px) {
     .footer {
         flex-direction: column; 
         text-align: center; 
-        padding: 20px 10px;
+        padding: 15px;
+        font-size: 0.9rem;
     }
+    
     .footer p {
-        white-space: normal; 
+        white-space: normal;
+        font-size: 1.2rem;
+        margin: 3px 0;
+    }
+}
+
+/* Mobiles médios (480px - 600px) - Escala 65% */
+@media (max-width: 600px) {
+    .footer {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+    
+    .footer p {
+        font-size: 1.1rem;
+        margin: 3px 0;
+    }
+}
+
+/* Mobiles pequenos (até 480px) - Escala 55% */
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    
+    .footer p {
+        font-size: 1rem;
+        margin: 2px 0;
+    }
+}
+
+/* Mobiles muito pequenos (até 360px) - Escala 50% */
+@media (max-width: 360px) {
+    .footer {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+    
+    .footer p {
+        font-size: 0.95rem;
+        margin: 2px 0;
+    }
+}
+
+/* Mobiles micro (até 320px) - Escala 45% */
+@media (max-width: 320px) {
+    .footer {
+        padding: 6px;
+        font-size: 0.7rem;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+        margin: 1px 0;
+    }
+}
+
+/* Ajustes para landscape em mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .footer {
+        padding: 8px 15px;
+        font-size: 0.75rem;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+        margin: 1px 0;
     }
 }

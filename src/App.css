@@ -28,9 +28,6 @@ section:nth-child(odd) {
 }
 
 /* 
-section > div, footer div {
-    width: 1200px;
-    margin: auto;
-    padding: 20px;
+section > div, header > div, footer > div {
     border: 1px solid black;
 } */
