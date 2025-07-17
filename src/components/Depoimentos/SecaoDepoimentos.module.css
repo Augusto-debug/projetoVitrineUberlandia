@@ -40,173 +40,31 @@
   background-color: #FAFAFA;
   border-radius: 16px;
   overflow: hidden;
-  height: 500px;
+  height: auto;
   box-sizing: border-box;
 }
 
 .containerImagemDepoimentos > div:nth-child(1) {
   width: 100%;
-  height: 100%;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #FAFAFA;
-  position: relative;
   overflow: hidden;
 }
 
 .imagemConsultora {
-  width: 100vw;
+  width: 100%;
   height: 100%;
-  object-fit: contain; /* Mudança principal: contain para mostrar foto completa */
+  object-fit: cover; 
   object-position: center;
   display: block;
   border: none;
   outline: none;
   background-color: #FAFAFA;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* ========== RESPONSIVIDADE DA IMAGEM CONSULTORA ========== */
-
-/* Desktop grande */
-@media (min-width: 1400px) {
-  .containerImagemDepoimentos > div:nth-child(1) {
-    width: 380px;
-    min-width: 380px;
-    max-width: 380px;
-  }
-  
-  .imagemConsultora {
-    width: 100%;
-    position: static;
-    transform: none;
-    left: auto;
-    object-fit: contain;
-  }
-}
-
-/* Desktop médio */
-@media (max-width: 1400px) and (min-width: 1024px) {
-  .containerImagemDepoimentos > div:nth-child(1) {
-    width: 320px;
-    min-width: 320px;
-    max-width: 320px;
-  }
-  
-  .imagemConsultora {
-    width: 100%;
-    position: static;
-    transform: none;
-    left: auto;
-    object-fit: contain;
-  }
-}
-
-/* Tablet médio */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .containerImagemDepoimentos > div:nth-child(1) {
-    width: 290px;
-    min-width: 290px;
-    max-width: 290px;
-  }
-  
-  .imagemConsultora {
-    width: 100%;
-    position: static;
-    transform: none;
-    left: auto;
-    object-fit: contain;
-  }
-}
-
-/* Mobile grande - layout vertical */
-@media (max-width: 768px) {
-  .containerImagemDepoimentos > div:nth-child(1) {
-    width: 100%;
-    min-width: auto;
-    max-width: none;
-    height: 250px;
-  }
-  
-  .imagemConsultora {
-    width: 100vw;
-    height: 100%;
-    object-fit: contain; /* Mostra foto completa */
-    object-position: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 12px 12px 0 0;
-  }
-}
-
-/* Mobile médio */
-@media (max-width: 600px) {
-  .containerImagemDepoimentos > div:nth-child(1) {
-    height: 220px;
-  }
-  
-  .imagemConsultora {
-    object-fit: contain; /* Mostra foto completa */
-    border-radius: 10px 10px 0 0;
-  }
-}
-
-/* Mobile pequeno */
-@media (max-width: 480px) {
-  .containerImagemDepoimentos > div:nth-child(1) {
-    height: 190px;
-  }
-  
-  .imagemConsultora {
-    object-fit: contain;
-    border-radius: 8px;
-  }
-}
-
-/* Mobile muito pequeno */
-@media (max-width: 360px) {
-  .containerImagemDepoimentos > div:nth-child(1) {
-    height: 170px;
-  }
-  
-  .imagemConsultora {
-    object-fit: contain; /* Mostra foto completa */
-    border-radius: 6px 6px 0 0;
-  }
-}
-
-/* Mobile micro */
-@media (max-width: 320px) {
-  .containerImagemDepoimentos > div:nth-child(1) {
-    height: 150px;
-  }
-  
-  .imagemConsultora {
-    object-fit: contain; /* Mostra foto completa */
-  }
-}
-
-/* Landscape mobile */
-@media (max-height: 500px) and (orientation: landscape) {
-  .containerImagemDepoimentos > div:nth-child(1) {
-    width: 200px;
-    min-width: 200px;
-    max-width: 200px;
-    height: 100%;
-  }
-  
-  .imagemConsultora {
-    width: 100%;
-    object-fit: contain; /* Mostra foto completa */
-    position: static;
-    transform: none;
-    left: auto;
-    border-radius: 8px 0 0 8px;
-  }
+  position: static;
+  transform: none;
 }
 
 .containerImagemDepoimentos > div:nth-child(2) {
@@ -224,8 +82,6 @@
   align-content: center;
   box-sizing: border-box;
 }
-
-/* ========== SISTEMA DE RESPONSIVIDADE PROPORCIONAL ========== */
 
 /* Desktops grandes (>1400px) - Escala 110% */
 @media (min-width: 1400px) {
