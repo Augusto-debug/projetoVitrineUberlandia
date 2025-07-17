@@ -4,6 +4,7 @@
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    min-height: 70vh;
 }
 
 .topSection {

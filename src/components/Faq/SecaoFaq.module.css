@@ -2,27 +2,16 @@
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
-    gap: 20px;
-    align-items: center; 
+    height: 800px;
+    align-items: center; ;
     text-align: center; 
-    min-height: 70vh;
-    box-sizing: border-box;
-    max-width: 1400px;
     margin: 0 auto;
-    width: 100%;
 }
 
 .secaoFaq h1 {
     font-size: 3.5rem; 
-    margin-bottom: 40px; 
     color: white; 
     font-weight: bold;
-}
-
-.secaoFaq h2 {
-    font-size: 2.5em; 
-    margin-bottom: 20px;
-    color: white; 
 }
 
 .secaoFaq > div {
@@ -31,43 +20,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
 }
 
-.secaoFaq p {
-    padding: 10px 20px;
-    font-size: 1.4rem;
-    color: white; 
-    max-width: 800px; 
-    line-height: 1.6;
-}
 
 .secaoFaq details {
-    background-color: transparent; 
-    border-radius: 0; 
-    margin-bottom: 0; 
     width: 100%; 
     max-width: 800px; 
-    overflow: hidden; 
-    border: none; 
-    padding-top: 20px;
-    box-sizing: border-box;
+    max-height: 200px;
+}
+
+.secaoFaq summary p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
 }
 
 .secaoFaq summary {
-    padding: 0 20px 20px 0; 
     font-weight: bold;
     cursor: pointer;
     display: flex; 
+    padding: 0;
+    margin: 0;
     align-items: center; 
     justify-content: space-between;
     color: white; 
-    background-color: transparent; 
-    border-bottom: none;
-    border-top: none; 
-    list-style: none;
-    font-size: 1.2rem;
-    line-height: 1.4;
 }
 
 .secaoFaq summary::-webkit-details-marker {
@@ -87,15 +65,11 @@
     transform: rotate(180deg); 
 }
 
+
 .secaoFaq details p {
     font-size: 1.1rem;
-    padding: 20px 30px 15px 0; 
-    background-color: transparent; 
-    border-top: none;
     text-align: left; 
-    margin-top: 0; 
-    margin-bottom: 0; 
-    line-height: 1.6;
+    padding: 0;
     color: white;
 }
 
