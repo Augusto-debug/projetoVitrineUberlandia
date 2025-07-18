@@ -25,12 +25,6 @@ const HeroSection = () => {
             Com criatividade, estratégia e um atendimento personalizado, meu
             objetivo é conectar pessoas e negócios de forma autêntica e eficaz.
           </p>
-          <p className="hero-details">
-            Sou especialista em Marketing Digital, apaixonada por histórias de
-            vida e por criar conexões que transformam. Acredito no poder de
-            trabalhar com propósito, ao lado de pessoas honestas e dedicadas,
-            que buscam conquistar seu espaço com amor pelo que fazem.
-          </p>
           <div className="hero-actions">
             <button
               className="partner-btn"

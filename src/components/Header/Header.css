@@ -1,9 +1,9 @@
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 15px 40px;
+  padding: 10px 40px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -15,10 +15,11 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 1400px;
 }
 
 .header-container img {
-  height: 150px;
+  height: 100px;
   width: auto;
 }
 
