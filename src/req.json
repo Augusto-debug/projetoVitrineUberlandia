@@ -10,7 +10,14 @@
     },
     {
       "pergunta": "Quais tipos de negócios podem se beneficiar da divulgação no Instagram?",
-      "resposta": "<ul><li>Restaurantes, cafés e bares</li><li>Lojas físicas e e-commerce</li><li>Salões de beleza, barbearias e clínicas de estética</li><li>Eventos, festas e feiras</li><li>Profissionais autônomos (fotógrafos, designers, coaches, etc.)</li><li>Marcas pessoais e influenciadores locais</li></ul>"
+      "resposta": [
+        "Restaurantes, cafés e bares",
+        "Lojas físicas e e-commerce",
+        "Salões de beleza, barbearias e clínicas de estética",
+        "Eventos, festas e feiras",
+        "Profissionais autônomos (fotógrafos, designers, coaches, etc.)",
+        "Marcas pessoais e influenciadores locais"
+      ]
     },
     {
       "pergunta": "Como faço pra divulgar meu negócio no Instagram?",
