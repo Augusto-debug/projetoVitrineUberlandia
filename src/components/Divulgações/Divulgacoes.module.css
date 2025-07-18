@@ -19,7 +19,6 @@
 
 .partners-header h2 {
   color: white;
-  font-size: 3rem;
   font-weight: bold;
   margin: 0 0 20px 0;
   text-transform: uppercase;
@@ -28,7 +27,6 @@
 
 .partners-header p {
   color: white;
-  font-size: 1.2rem;
   margin: 0;
   opacity: 0.95;
   line-height: 1.6;
@@ -75,7 +73,6 @@
   text-align: center;
   padding: 20px 0;
   margin: 0;
-  font-size: 1.3rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -133,14 +130,6 @@
     margin-bottom: 40px;
   }
 
-  .partners-header h2 {
-    font-size: 2rem;
-  }
-  
-  .partners-header p {
-    font-size: 1rem;
-  }
-  
   .partners-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -165,7 +154,6 @@
   }
   
   .partner-card h3 {
-    font-size: 1rem;
     padding: 15px 0;
   }
   
@@ -196,14 +184,6 @@
     margin-bottom: 30px;
   }
   
-  .partners-header h2 {
-    font-size: 1.8rem;
-  }
-
-  .partners-header p {
-    font-size: 0.95rem;
-  }
-  
   .partners-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 15px;
@@ -223,7 +203,6 @@
   }
 
   .partner-card h3 {
-    font-size: 1.1rem;
     padding: 15px 0;
   }
 }
